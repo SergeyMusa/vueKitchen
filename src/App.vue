@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <CompLogo />
     <!-- <img id="scull" alt="Vue logo" src="./assets/log-v.png"> -->
-    <img id="scull" alt="My logo" src="img/logo.webp" height="100px">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <hr>
     <TodoList :todos="todos" @delete-todo="deleteTodo"/>
@@ -11,6 +11,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import TodoList from './components/TodoList.vue'
+import CompLogo from './components/CompLogo.vue'
 
 export default {
   name: 'App',
@@ -20,6 +21,7 @@ export default {
     }
   },
   components: {
+    CompLogo,
     TodoList,
     HelloWorld
   },
@@ -39,10 +41,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-img.scull{
-  height: 120px;
-  width: 220px;
-  padding: 1rem;
 }
 </style>
