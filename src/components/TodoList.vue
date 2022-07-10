@@ -2,9 +2,14 @@
     <ul>
         <li v-for="(todo, index) in todos" @click="deleteTodo(index)" :key="index">{{ todo }}</li>
     </ul>
+    <!-- {{}} -->
 </template>
 
 <script>
+import {i} from './HelloWorld.vue'
+import {HelloWorld} from './HelloWorld.vue'
+
+
 export default {
     props: ['todos'],
     methods: {
@@ -13,6 +18,10 @@ export default {
         }
     }
 }
+console.log(i);
+console.log(HelloWorld.data.message);
+// ???
+
 </script>
 
 <style>

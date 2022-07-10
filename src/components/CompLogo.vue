@@ -3,12 +3,12 @@
 </template>
 
 <script>
-// export default {
-//   name: 'CompLogo',
+export default {
+  name: 'CompLogo',
 //   props: {
 //     msg: String
 //   }
-// }
+}
 </script>
 
 <style scoped>
