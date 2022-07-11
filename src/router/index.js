@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFound from '../views/ErrorPage.vue'
 
 Vue.use(VueRouter)
 
@@ -22,6 +23,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
     //  или проще
     // component: Page2
+  },
+  {
+    path: '*',
+    name: 'notFound',
+    component: NotFound
   }
 ]
 
