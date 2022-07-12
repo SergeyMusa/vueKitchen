@@ -1,5 +1,9 @@
 <template>
-      <img id="scull" alt="My logo" src="img/logo.webp" height="100px">
+  <div class="logo">
+    mainBack
+  </div>
+  
+      <!-- <img id="scull" alt="My logo" src="img/logo.webp" height="100px"> -->
 </template>
 
 <script>
@@ -12,9 +16,15 @@ export default {
 </script>
 
 <style scoped>
-/* img.scull{
-  height: 120px;
-  width: 220px;
-  padding: 1rem;
-} */
+.logo{
+    height: 1024px;
+
+  background-color: black;
+  /* background-size: contain ; */
+  background-repeat: no-repeat;
+
+  background-image: url(../s1.jpg);;
+
+}
+
 </style>
