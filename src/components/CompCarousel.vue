@@ -3,7 +3,7 @@
         <carousel-3d>
             <slide :index="0">
                 Slide 1 Content
-                <img :src=imgUrl alt="My Kitchen">
+                <img :src="imgUrl" alt="My Kitchen ${i}">
                 <!-- height="100px" -->
             </slide>
             <slide :index="1">
@@ -39,9 +39,18 @@ export default {
   data () {
     return {
       i: 5,
-      alt: "kitchen",
-      imgUrl: `img/k1/k{{i}}`   
+    //   alt: "kitchen",
+
+      imgUrl: `img/k/k1.jpg`   
     }
+  },
+  computed:{
+        //   alt: `"kitchen" this.i`,
+    // // imgUrl (){
+    // //    return this.url + ${i} 
+    // // }
+    //     console.log(this.alt);
+
   },
     //  slide: `img/k1/k{{i}}`
     //   ...

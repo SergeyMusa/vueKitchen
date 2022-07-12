@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <SiteHeader />
+    <div>
+          <SiteHeader />
 
-    <nav>
-      <router-link to="/">Основная</router-link> |
-      <router-link to="/about">Полезное</router-link>
-    </nav>
-    <router-view/>
-    
-    <CompMap />
-    <SiteFooter />
+      <div>
+        <CompLogo />
+        <nav>
+          <router-link to="/">Основная</router-link> |
+          <router-link to="/about">Полезное</router-link>
+        </nav>
+        <router-view/>
+        <CompMap />
+       <SiteFooter />
+      </div>
+
+    </div>
+
   </div>
 </template>
 
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
+import CompLogo from '@/components/CompLogo.vue'
 
 import CompMap from '@/components/CompMap.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
@@ -23,7 +30,8 @@ export default {
    components: {
         SiteHeader,
         CompMap,
-        SiteFooter
+        SiteFooter,
+        CompLogo
 
    }
 }
