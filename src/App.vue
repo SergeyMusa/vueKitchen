@@ -3,22 +3,26 @@
     <SiteHeader />
 
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Основная</router-link> |
+      <router-link to="/about">Полезное</router-link>
     </nav>
     <router-view/>
-
+    
+    <CompMap />
     <SiteFooter />
   </div>
 </template>
 
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
+
+import CompMap from '@/components/CompMap.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 
 export default {
    components: {
         SiteHeader,
+        CompMap,
         SiteFooter
 
    }
