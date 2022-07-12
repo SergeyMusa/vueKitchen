@@ -6,8 +6,10 @@
         height: '88%',
       }"
     >
+      <div class="h">
         <h1>404</h1>
         <h2>Похоже вы немного заплутали, вернитесь назад</h2>
+      </div>
             <!-- <img id="scull" alt="My logo" src="img/logo.webp" height="100px"> -->
 
     </div>
@@ -18,46 +20,31 @@
 </script>
 
 <style scoped>
-/* img/404.jpg */
-body{
-    
-}
 div{
-    background: #cccccc;
-    /* background-image: "img/404.jpg"; */
-           /* background-size: 100% auto; */
+  background: #cccccc;
 background-size: contain ;
-background-repeat: no-repeat;
-margin: 10%;
-/* background-size:  contain auto; */
-
- position:absolute;
-  /*  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px; */
+  background-repeat: no-repeat;
+  position:absolute;
+  /* top:-100px; */
     /* height: 80%;
     width: 99%; */
-
 }
-h1 {
-    /* position:absolute; */
-   /*  top:40%;
-    right:50%; */
-    /* margin-top: 20%; */
-    /* text-align: center;
-   
-    display: inline-block; 
-    vertical-align: middle;  */
-
-    /* display: block; */
-
-  /* display: inline-block; */ 
+div.h{
+  background: #ccccccc8;
   margin-top: 13%;
   vertical-align: middle;
+  line-height: 0.7;
   
+  margin-left: 30% ;
+  margin-right: 30% ;
+  padding: 5px 20px;
+  border-radius: 1rem ;
+}
+h1 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 h2 {
-    line-height: 0.7;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 </style>

@@ -1,12 +1,29 @@
 <template>
   <div id="app">
+    <SiteHeader />
+
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
+
+    <SiteFooter />
   </div>
 </template>
+
+<script>
+import SiteHeader from '@/components/SiteHeader.vue'
+import SiteFooter from '@/components/SiteFooter.vue'
+
+export default {
+   components: {
+        SiteHeader,
+        SiteFooter
+
+   }
+}
+</script>
 
 <style>
 #app {
@@ -18,7 +35,7 @@
 }
 
 nav {
-  padding: 30px;
+  padding: 5px;
 }
 
 nav a {
