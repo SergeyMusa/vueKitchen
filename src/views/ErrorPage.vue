@@ -1,16 +1,17 @@
 <template>
-  <div
-    :style="{
-      'background-image': `url(img/404.jpg)`,
-      width: '99%',
-      height: '88%',
-    }"
-  >
+<!-- TODO:
+FIXME: -->
+  <div class="main">
     <div class="h">
       <h1>404</h1>
       <h2>Похоже вы немного заплутали, вернитесь назад</h2>
     </div>
     <!-- <img id="scull" alt="My logo" src="img/logo.webp" height="100px"> -->
+  
+          <a href="#insta"
+          ><img class="socPict" alt="insta" src="../assets/img/soc/insta.png"
+        /></a>
+  
   </div>
 </template>
 
@@ -27,6 +28,11 @@
 </script>
 
 <style scoped>
+.main{
+   background-image: "url(404.jpg)";
+      width: "99%";
+      height: "88%";
+}
 div {
   background: #cccccc;
   background-size: contain;

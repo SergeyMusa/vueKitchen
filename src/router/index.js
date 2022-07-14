@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import PageMain from '../components/PageMain.vue'
 import NotFound from '../views/ErrorPage.vue'
+import KitchenPlans from '../views/KitchenPlans.vue'
+import KitchenAfter from '../views/KitchenAfter.vue'
 
 Vue.use(VueRouter)
 
@@ -12,7 +14,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: PageMain
   },
   {
     path: '/about',
@@ -20,10 +22,19 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-    //  или проще
-    // component: Page2
+    component: () => import(/* webpackChunkName: "about" */ '../views/PageUseful.vue')
+    //  или проще  // component: Page2
   },
+    {
+      path: '/page1',
+      name: 'page1',
+      component: KitchenPlans
+    },
+    {
+      path: '/page2',
+      name: 'информация',
+      component: KitchenAfter
+    },
   {
     path: '*',
     name: 'notFound',

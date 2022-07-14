@@ -1,12 +1,15 @@
 <template>
-  <div id="poleznoe">
+  <div>
 
     <nav>
       <router-link to="/page1">Типы планировок кухни</router-link> |
       <router-link to="/page2">Уход за мебелью из МДФ</router-link>
     </nav>
     <router-view/>
-    
+
+    <div id="useful">
+      <hr>
+    </div>
   </div>
 </template>
 
@@ -16,10 +19,10 @@
 </script>
 
 <style>
-/* .poleznoe {
+/* .useful {
   height: 100%;
 } */
-.poleznoe {
+.useful {
   height: 100%;
   
   box-sizing: border-box;

@@ -23,7 +23,7 @@ import { yandexMap, ymapMarker } from 'vue-yandex-maps'
 // https://vue-yandex-maps.github.io/examples/#%D0%BA%D0%B0%D1%81%D1%82%D0%BE%D0%BC%D0%BD%D0%B0%D1%8F-%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0
 
 export default {
-      name: 'CompMap',
+  name: 'CompMap',
 
   components: { yandexMap, ymapMarker },
   // other options
@@ -44,14 +44,12 @@ export default {
 
 <style scoped>
 .map {
-  width: 100%;
-  height: 100vh;
+  width: 90%;
+  height: 80vh;
 
     position: sticky;
     overflow: hidden;
 }
-
-
 .ymap-container {
   height: 100%;
 }

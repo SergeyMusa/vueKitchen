@@ -1,49 +1,72 @@
 <template>
   <div class="main">
-    <div class="main__left">
-      <!-- Логотип -->
-      <img id="scull" alt="My logo" src="img/logo.webp" height="100px" />
-    </div>
-    <div class="main__right">
-      <div class="main__right__top">
-        <a class="header-phone" href="tel:78652404050">📞 + 7 (8652) 404-050</a>
-        <a class="btn phone-back-call" href="#call">Заказать звонок</a>
-        <p>Принимаем заявки ежедневно с 9:00 до 18:00</p>
+      <div class="main__left">
+        <!-- Логотип -->
+        <img
+          id="scull"
+          alt="My logo"
+          src="../assets/img/logo.webp"
+          height="100px"
+        />
       </div>
-      <div class="main__right__bottom">
-        <p>
+
+      <div class="main__right">
+        <div class="main__right__top">
+          <a class="header-phone" href="tel:78652404050"> +7(8652) 404-050</a>
+          <MainBtn btnName="Заказать  📞 " btnUrl="#call" />
+          <!-- <a class="btn phone-back-call" href="#call">Заказать звонок</a> -->
+        </div>
+          <p>Принимаем заявки ежедневно с 9:00 до 18:00</p>
+
+        <div class="main__right__bottom">
           <a href="#insta"
-            ><img class="socPict" alt="insta" src="img/soc/insta.png"
+            ><img class="socPict" alt="insta" src="../assets/img/soc/insta.png"
           /></a>
           <a href="#whatsapp"
-            ><img class="socPict" alt="whatsapp" src="img/soc/whatsapp.png" />
+            ><img
+              class="socPict"
+              alt="whatsapp"
+              src="../assets/img/soc/whatsapp.png"
+            />
           </a>
           <a href="#telegramm"
-            ><img class="socPict" alt="telegramm" src="img/soc/telegramm.png" />
+            ><img
+              class="socPict"
+              alt="telegramm"
+              src="../assets/img/soc/telegramm.png"
+            />
           </a>
           <a href="#vk"
-            ><img class="socPict" alt="vk" src="img/soc/vk.png" />
+            ><img class="socPict"  href="#youtube" alt="vk" src="../assets/img/soc/vk.png" />
           </a>
-          <a> `& nbsp` </a>
-          <a href="#address"
+          <a href="#youtube"
+            ><img class="socPict" href="#youtube" alt="youtube" src="../assets/img/soc/youtube.png" />
+          </a>
+          <a href="#email"
+            ><img class="socPict" href="mailto:kuhni-26@mail.ru?subject=Вопрос по кухне" alt="email" src="../assets/img/soc/mail.png" />
+          </a>
+          <!-- <a> `& nbsp` </a> --> <!-- FIXME: -->
+          <a href="#map" class="left_margin"
             ><img
               class="socPict"
               alt="Адрес: г. Ставрополь, ул. Рогожникова д. 23/2"
-              src="img/soc/address.png"
+              src="../assets/img/soc/address.png"
               title="Адрес: г. Ставрополь, ул. Рогожникова д. 23/2"
             />
           </a>
-        </p>
-
-        <p></p>
-      </div>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
+import MainBtn from "@/components/MainBtn.vue";
+
 export default {
   name: "SiteHeader",
+  components: {
+    MainBtn,
+  },
   //   props: {
   //     msg: String
   //   }
@@ -53,97 +76,62 @@ export default {
 <style scoped>
 .main {
   /* display: inline-block; */
-  border: 1px solid red;
+  border: 1px solid orange;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   /* width: 99%; */
-  margin: 1rem;
-    background-color: rgb(205, 202, 202);
-    opacity: 0.7; /* прозрачность */
-
-
+  margin: 0 1rem ;
+  /* background-color: rgb(205, 202, 202); */
+  /* opacity: 0.7;  */
+  /* прозрачность */
 }
 .main__left {
-  padding-top: 5px;
-
+  padding-top: 15px;
 }
 .main__right {
+  border: 1px solid red;
 
-  padding-top: 10px;
-  padding-right: 1rem;
+  min-width: 22rem;
+  padding-top: 15px;
+  padding-right: 10px;
   text-align: left;
-    line-height: 0.1;
-
+  line-height: 0.1;
 }
-img.socPict {
-  /* border: 1px solid green; */
-  height: 40px;
+.main__right__top{
+display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: -8px 0 -15px;
 }
-img.socPict:hover {
-  /* border: 1px solid rgb(36, 220, 36); */
-  height: 42px;
-}
-.main__right__bottom {
-        border: 1px solid goldenrod;
-  margin: 0;
-  padding: 0px;
-      margin-block-start: 0;
-    margin-block-end: 0em;
-}
-/* .main__right__bottom.p {
-    margin: 0;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-} */
-
-/* img.scull{
-  height: 120px;
-  width: 220px;
-  padding: 1rem;
-} */
 .header-phone {
   text-decoration: none;
   color: black;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   /* border: 1px solid rgb(221, 57, 224); */
+  margin-top: 0.9rem;
 }
-.header-phone:hover {
-  color: rgb(3, 25, 89);
+img.socPict {
+  /* border: 1px solid green; */
+  height: 35px;
+  margin: 0 2px;
 }
-.btn {
-  background-color: #46bb4a; /* Green */
-  border: none;
-  color: white;
-  padding: 12px 12px;
-  margin-left: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 3px;
-  /* min-width: 100px; */
+img.socPict:hover {
+  /* border: 1px solid rgb(36, 220, 36); */
+  /* box-shadow: 0px 0px 5px 3px rgb(234, 226, 226); */
+    filter: brightness(135%);
+
+  /* background-blend-mode: hard-light; */
 }
 
-.btn:focus-visible {
-  border: 1px solid #0e6611;
-  outline: none;
+.header-phone:hover {
+  color: rgb(3, 25, 89);
+  /* box-shadow: 0px 0px 15px 10px #000; */
 }
-.btn:hover {
-  /* border: 1px solid #349e38; */
-  background-color: #3b993e; /* Green */
-  transition: all 0.4s;
-  box-shadow: 0 7px 14px rgb(65 132 144 / 10%), 0 3px 6px rgb(0 0 0 / 8%);
-}
-.btn:active {
-  background-color: #808080;
-}
-.btn:disabled {
-  background-color: #eee;
-  border-color: #eee;
-  color: #444;
-  cursor: not-allowed;
+
+.left_margin {
+  margin-left: 4rem;
 }
 </style>

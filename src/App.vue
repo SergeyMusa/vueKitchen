@@ -1,27 +1,18 @@
 <template>
   <div id="app">
-    <div class="content">
-
-      <div class="pageLogo">
-        <SiteHeader />
-        <div>
-          <nav>
-            <router-link to="/">Основная</router-link> |
-            <router-link to="/about">Полезное</router-link>
-          </nav>
-          <router-view/>
-        </div>
-      </div>
-
-      <div class="pageHow">
-          <CompLogo />
-      </div>
-      
-      <div class="pageGallery">
-
-      </div>
-
+    <div class="pageHeader">
+      <SiteHeader />
     </div>
+   
+    <div class="PageMain">
+      <nav>
+        <router-link to="/">Основная</router-link> |
+        <router-link to="/about">Полезное</router-link>
+      </nav>
+      <router-view/>
+      <!-- <PageMain /> -->
+    </div>
+
     <div class="pageFooter">
       <SiteFooter />
     </div>
@@ -30,45 +21,19 @@
 
 <script>
 import SiteHeader from '@/components/SiteHeader.vue'
-import CompLogo from '@/components/CompLogo.vue'
-
+// import PageMain from '@/components/PageMain.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 
 export default {
    components: {
         SiteHeader,
-        SiteFooter,
-        CompLogo
-
+        // PageMain,
+        SiteFooter
    }
 }
 </script>
 
 <style>
-/* * {
-  margin: 0;
-  padding: 0;
-}
-html,
-body {
-  height: 100%;
-}
-.content {
-  position: relative;
-  min-height: 100%;
-    padding-bottom: 90px;
-
-} */
-/* .content {
-  padding-bottom: 90px;
-} */
-/* .pageFooter {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-} */
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -78,25 +43,20 @@ body {
   color: #2c3e50;
 }
 
+.pageHeader{
+  /* border: 1px solid blue; */
+  /* background-size: contain ; */
+}
 nav {
-  padding: 5px;
+  margin-top: -30px;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #0f161d;
 }
 
 nav a.router-link-exact-active {
   color: #42b983;
-}
-.pageLogo{
-  background-color: black;
-  /* background-size: contain ; */
-  background-repeat: no-repeat;
-  background-image: url(@/assets/s1.jpg);;
-}
-.pageMap{
-margin-top: 20%;
 }
 </style>

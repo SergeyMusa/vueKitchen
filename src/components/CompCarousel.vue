@@ -3,7 +3,8 @@
         <carousel-3d>
             <slide :index="0">
                 Slide 1 Content
-                <img :src="imgUrl" alt="My Kitchen ${i}">
+                <!-- FIXME: -->
+                <!-- <img :src="imgUrl" alt="My Kitchen ${i}"> -->
                 <!-- height="100px" -->
             </slide>
             <slide :index="1">
@@ -23,6 +24,9 @@
                 </template>
             </slide>
         </carousel-3d> -->
+        <a href="#insta"
+          ><img class="socPict" alt="insta" src="../assets/img/k/k1.jpg"
+        /></a>
     </div>
 </template>
 
@@ -31,7 +35,7 @@ import { Carousel3d, Slide, } from 'vue-carousel-3d';
 // import { i } from 'CompCarousel';
 
 export default {
-//   ...
+  name: "CompCarousel",
   components: {
     Carousel3d,
     Slide
@@ -40,8 +44,8 @@ export default {
     return {
       i: 5,
     //   alt: "kitchen",
-
-      imgUrl: `img/k/k1.jpg`   
+    // <!-- FIXME: -->
+      // imgUrl: "../assets/img/k/k1.jpg"
     }
   },
   computed:{
