@@ -60,6 +60,10 @@ export default {
   justify-content: space-between;
   /* width: 99%; */
   margin: 1rem;
+    background-color: rgb(205, 202, 202);
+    opacity: 0.7; /* прозрачность */
+
+
 }
 .main__left {
   padding-top: 5px;

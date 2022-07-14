@@ -16,15 +16,14 @@ export default {
 </script>
 
 <style scoped>
-.logo{
+/* .logo{
     height: 1024px;
 
   background-color: black;
-  /* background-size: contain ; */
   background-repeat: no-repeat;
 
   background-image: url(../s1.jpg);;
 
-}
+} */
 
 </style>

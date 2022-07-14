@@ -7,7 +7,23 @@
     </nav>
     <router-view/>
     
-  
   </div>
 </template>
 
+
+<script >
+
+</script>
+
+<style>
+/* .poleznoe {
+  height: 100%;
+} */
+.poleznoe {
+  height: 100%;
+  
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+</style>

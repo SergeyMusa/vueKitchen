@@ -47,4 +47,5 @@ div.main {
   width: 98%;
   margin: 1%;
 }
+
 </style>
