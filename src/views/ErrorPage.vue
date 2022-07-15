@@ -1,6 +1,5 @@
 <template>
-  <!-- TODO:
-FIXME: -->
+ <!-- FIXME: -->
   <div class="main">
     <div class="h">
       <h1>404</h1>

@@ -1,22 +1,21 @@
 <template>
   <div class="home">
-
-      <div class="PageFirst">
-        <PageFirst msg="Лучшие кухни Ставрополя" />
-        <!-- <img alt="Vue logo" src="img/logo.webp"> -->
-      </div>
+    <div class="home__PageFirst">
+      <PageFirst msg="Лучшие кухни Ставрополя" />
+      <!-- <img alt="Vue logo" src="img/logo.webp"> -->
+    </div>
+  
+    <div class="home__PageSecond">
+      <PageSecond />
+    </div>
     
-      <div class="PageSecond">
-        <PageSecond />
-      </div>
-      
-      <div class="pageGallery">
-        <CompCarousel />
-      </div>
+    <div class="home__pageGallery">
+      <CompCarousel />
+    </div>
 
-      <div id="#map" class="pageMap">
-        <CompMap />
-      </div>
+    <div id="#map" class="home__pageMap">
+      <CompContact />
+    </div>
   </div>
 </template>
 
@@ -24,7 +23,7 @@
 // @ is an alias to /src
 import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
-import CompMap from "@/components/CompMap.vue";
+import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
 
 export default {
@@ -33,7 +32,7 @@ export default {
     PageFirst,
     PageSecond,
     CompCarousel,
-    CompMap
+    CompContact
   },
 }
 </script>
@@ -41,22 +40,27 @@ export default {
 <style scoped>
 /* FIXME: переделать на флекс  */
 .home {
-    border: 1px solid blue;
+  border: 1px solid rgb(11, 192, 183);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
+  align-items: center;
 }
-.PageFirst{
+.home__PageFirst{
+  border: 1px solid rgb(0, 255, 0);
 
-  border: 1px solid red;
-  margin-top: 300px;
-
-  margin-top: 10%;
+  margin-top: 10px;
     background-repeat: no-repeat;
   background-image: url(@/assets/img/s1.jpg);
 }
-.PageSecond {
-  border: 1px solid blue;
-  margin-top: 300px;
+.home__PageSecond {
+  border: 1px solid rgb(104, 26, 169);
+  /* margin-top: 300px; */
 }
-.pageMap{
+.home__pageMap{
+  border: 1px solid rgb(60, 46, 192);
+
   margin-top: 5%;
 }
 

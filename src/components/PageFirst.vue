@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <h1>...{{ msg }}...</h1>
+  <div class="FirstPage">
+    <h1>{{ msg }}</h1>
     <p>
       собственное производство и минимальные сроки изготовления 
     </p>
@@ -11,9 +11,9 @@
 export default {
   name: 'FirstPage',
   data() {
-return {
-    message: "Hi Sir !",
-  };
+    return {
+        message: "Добро пожаловать !",
+      };
 },
   props: {
     msg: String
@@ -25,9 +25,18 @@ export {i};
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* h3 {
-  margin: 40px 0 0;
+.FirstPage{
+height: 70%;
+width: 99%;
+  color: #1a55d2;
+    font-size: 1.4rem;
+  font-weight: bold;
+  margin: 20% 0;
+  
+    border: 1px solid rgb(13, 188, 19);
+
 }
+/* 
 ul {
   list-style-type: none;
   padding: 0;
@@ -35,8 +44,8 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
+} */
 a {
   color: #42b983;
-} */
+}
 </style>

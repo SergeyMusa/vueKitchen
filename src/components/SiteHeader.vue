@@ -17,43 +17,9 @@
           <!-- <a class="btn phone-back-call" href="#call">Заказать звонок</a> -->
         </div>
           <p>Принимаем заявки ежедневно с 9:00 до 18:00</p>
-
+        <SiteHeaderSoc />
         <div class="main__right__bottom">
-          <a href="#insta"
-            ><img class="socPict" alt="insta" src="../assets/img/soc/insta.png"
-          /></a>
-          <a href="#whatsapp"
-            ><img
-              class="socPict"
-              alt="whatsapp"
-              src="../assets/img/soc/whatsapp.png"
-            />
-          </a>
-          <a href="#telegramm"
-            ><img
-              class="socPict"
-              alt="telegramm"
-              src="../assets/img/soc/telegramm.png"
-            />
-          </a>
-          <a href="#vk"
-            ><img class="socPict"  href="#youtube" alt="vk" src="../assets/img/soc/vk.png" />
-          </a>
-          <a href="#youtube"
-            ><img class="socPict" href="#youtube" alt="youtube" src="../assets/img/soc/youtube.png" />
-          </a>
-          <a href="#email"
-            ><img class="socPict" href="mailto:kuhni-26@mail.ru?subject=Вопрос по кухне" alt="email" src="../assets/img/soc/mail.png" />
-          </a>
-          <!-- <a> `& nbsp` </a> --> <!-- FIXME: -->
-          <a href="#map" class="left_margin"
-            ><img
-              class="socPict"
-              alt="Адрес: г. Ставрополь, ул. Рогожникова д. 23/2"
-              src="../assets/img/soc/address.png"
-              title="Адрес: г. Ставрополь, ул. Рогожникова д. 23/2"
-            />
-          </a>
+
         </div>
 
     </div>
@@ -62,11 +28,13 @@
 
 <script>
 import MainBtn from "@/components/MainBtn.vue";
+import SiteHeaderSoc from "@/components/SiteHeaderSoc.vue";
 
 export default {
   name: "SiteHeader",
   components: {
     MainBtn,
+    SiteHeaderSoc,
   },
 
   //   props: {
@@ -115,25 +83,11 @@ display: flex;
   /* border: 1px solid rgb(221, 57, 224); */
   margin-top: 0.9rem;
 }
-img.socPict {
-  /* border: 1px solid green; */
-  height: 35px;
-  margin: 0 2px;
-}
-img.socPict:hover {
-  /* border: 1px solid rgb(36, 220, 36); */
-  /* box-shadow: 0px 0px 5px 3px rgb(234, 226, 226); */
-    filter: brightness(135%);
 
-  /* background-blend-mode: hard-light; */
-}
+
 
 .header-phone:hover {
   color: rgb(3, 25, 89);
   /* box-shadow: 0px 0px 15px 10px #000; */
-}
-
-.left_margin {
-  margin-left: 4rem;
 }
 </style>

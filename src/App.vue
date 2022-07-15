@@ -1,22 +1,23 @@
 <template>
-  <div id="app">
-    <div class="pageHeader">
-      <SiteHeader />
-    </div>
-   
-    <div class="PageMain">
-      <nav>
-        <router-link to="/">Основная</router-link> |
-        <router-link to="/about">Полезное</router-link>
-      </nav>
-      <router-view/>
-      <!-- <PageMain /> -->
+  <div id="app" class="app">
+    <div class="app__pageTop">
+      <div>
+        <SiteHeader />
+      </div>
+      
+      <div class="app__pageTop__PageMain">
+        <nav>
+          <router-link to="/">Основная</router-link> |
+          <router-link to="/about">Полезное</router-link>
+        </nav>
+        <router-view/>
+          <!-- <PageMain /> -->
+      </div> 
     </div>
 
-    <div class="pageFooter">
+    <div class="app__pageBottom">
       <SiteFooter />
     </div>
-
   </div>
 </template>
 
@@ -44,12 +45,22 @@ export default {
   color: #2c3e50;
 }
 
-.pageHeader{
+.app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
+  align-items: center;
   /* border: 1px solid blue; */
   /* background-size: contain ; */
 }
+.app__pageTop{
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-start ;
+}
 nav {
-  margin-top: -30px;
+  /* margin-top: -30px; */
+    margin-bottom: -10px;
 }
 
 nav a {

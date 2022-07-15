@@ -30,8 +30,6 @@ export default {
   data: () => ({
     coords: [
         45.054971, 41.995639,
-    //   54.82896654088406,
-    //   39.831893822753904,
     ],
   }),
   methods: {
@@ -44,9 +42,8 @@ export default {
 
 <style scoped>
 .map {
-  width: 90%;
   height: 80vh;
-
+  width: 45vw;
     position: sticky;
     overflow: hidden;
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        PageCards
     </div>
 </template>
 
