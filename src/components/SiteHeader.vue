@@ -55,6 +55,7 @@
             />
           </a>
         </div>
+
     </div>
   </div>
 </template>
@@ -67,6 +68,7 @@ export default {
   components: {
     MainBtn,
   },
+
   //   props: {
   //     msg: String
   //   }

@@ -1,5 +1,5 @@
 <template>
-<!-- TODO:
+  <!-- TODO:
 FIXME: -->
   <div class="main">
     <div class="h">
@@ -7,11 +7,10 @@ FIXME: -->
       <h2>Похоже вы немного заплутали, вернитесь назад</h2>
     </div>
     <!-- <img id="scull" alt="My logo" src="img/logo.webp" height="100px"> -->
-  
-          <a href="#insta"
-          ><img class="socPict" alt="insta" src="../assets/img/soc/insta.png"
-        /></a>
-  
+
+    <a href="#insta">
+      <img class="socPict" alt="insta" src="../assets/img/soc/insta.png" />
+    </a>
   </div>
 </template>
 
@@ -28,10 +27,10 @@ FIXME: -->
 </script>
 
 <style scoped>
-.main{
-   background-image: "url(404.jpg)";
-      width: "99%";
-      height: "88%";
+.main {
+  background-image: "url(404.jpg)";
+  width: "99%";
+  height: "88%";
 }
 div {
   background: #cccccc;

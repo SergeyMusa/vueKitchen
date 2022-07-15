@@ -35,7 +35,6 @@ import { Carousel3d, Slide, } from 'vue-carousel-3d';
 // import { i } from 'CompCarousel';
 
 export default {
-  name: "CompCarousel",
   components: {
     Carousel3d,
     Slide

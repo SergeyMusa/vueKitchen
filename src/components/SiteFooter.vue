@@ -3,6 +3,7 @@
     <div>
       <!-- Логотип -->
       <img id="scull" alt="My logo" src="../assets/img/logo.webp" height="100px" />
+
       © 2022 Альфа Мебель
     </div>
     <div>
@@ -47,5 +48,4 @@ div.main {
   width: 98%;
   margin: 1%;
 }
-
 </style>

@@ -35,6 +35,7 @@ const routes = [
       name: 'информация',
       component: KitchenAfter
     },
+
   {
     path: '*',
     name: 'notFound',
