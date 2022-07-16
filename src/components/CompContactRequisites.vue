@@ -5,9 +5,11 @@
 
  <!-- FIXME: сделать  переключение табов по активной-->        
        <ul>
-
-        <p class="tab has-icon leftstr active"><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" /></p>
-        <p class="tab has-icon rightstr "><MainBtn btnName="Реквизиты" btnUrl="#tab_Реквизиты" /></p>
+        <!-- непонял как передать клас в кнопку -->
+        <!-- <p class="tab has-icon leftstr "><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" btnStyle="isActive" /></p> -->
+<!-- v-on:click="doActiv" -->
+        <p class="tab leftstr isActive" :class="classActive == 'true' ? 'isActive' : 'hidde'"><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" btnStyle="isActive" /></p>
+        <p class="tab rightstr " @click="doActiv" :class="classActive == 'false' ? 'isActive' : 'hidde'"><MainBtn btnName="Реквизиты" btnUrl="#tab_Реквизиты" /></p>
 
       </ul>
 
@@ -95,19 +97,48 @@ export default {
   data() {
     return {
         leftTab: true,
+        
+        classActive: true,
+        hasError: false
       };
     },
-
+    methods: {
+        // FIXME:   менять класс на кнопке
+            //  doActiv: function (event) {
+        doActiv: function () {
+            // console.log(this.isActive);
+            if (this.classActive === true) {
+                this.classActive =false 
+            }
+            else {
+                this.classActive =true
+            }
+        //    console.log(this.isActive);
+        // // `this` внутри методов указывает на экземпляр Vue
+        //     alert('Привет, ' + this.name + '!')
+        // // `event` — нативное событие DOM
+        //     if (event) {
+        //         alert(event.target.tagName)
+        }        
+    }
 //   props: {
 //     msg: String
 //   },
-}
+};
 </script>
 
 <style scoped>
-.hidden{
-    display:none;
+.hidde{
+    /* display:none; */
+    /* visibility: hidden; */
+    background-color: #20e2db;
+
 }
+.isActive {
+	/* box-shadow: 0 0 0 3px lightskyblue; */
+	background-color: #47e220;
+}
+
 .isActiv p{
     line-height: 0.9;
    /* margin: 0 10px;
@@ -140,4 +171,8 @@ ul{
       border: 1px solid rgb(192, 159, 11);
     margin-bottom: 15px;
 }
+/* .isActive {
+	box-shadow: 0 0 0 3px lightskyblue;
+	background-color: #2047e2;
+} */
 </style>

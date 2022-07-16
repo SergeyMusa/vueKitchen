@@ -1,6 +1,6 @@
 <template>
-  <div class="FirstPage">
-    <h1>{{ msg }}</h1>
+  <div class="firstPage">
+    <h1>{{ msg.toUpperCase() }}</h1>
     <p>
       собственное производство и минимальные сроки изготовления 
     </p>
@@ -25,26 +25,27 @@ export {i};
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.FirstPage{
-height: 70%;
-width: 99%;
-  color: #1a55d2;
-    font-size: 1.4rem;
-  font-weight: bold;
-  margin: 20% 0;
-  
-    border: 1px solid rgb(13, 188, 19);
+.firstPage{
+  /* border: 1px solid rgb(188, 176, 13); */
+display: flex;
+  flex-direction: column;
+  justify-content: center ;
+  align-items: center;
 
+  height: 200px;
+
+  color: #1a55d2;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /* opacity: 0.6; */
+  /* background: rgba(0, 0, 0, 0.2); */
+  /* box-shadow: 0 0 25px 27px white inset; */
+  /* border-radius: 15vh; */
+  margin: 15% 15%;
+  
+  border-radius: 55px;
+      box-shadow: 0 0 25px 27px rgba(255, 255, 255, 0.6);
 }
-/* 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-} */
 a {
   color: #42b983;
 }

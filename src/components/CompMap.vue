@@ -42,7 +42,7 @@ export default {
 
 <style scoped>
 .map {
-  height: 80vh;
+  height: 60vh;
   width: 45vw;
     position: sticky;
     overflow: hidden;

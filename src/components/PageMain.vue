@@ -49,10 +49,16 @@ export default {
 }
 .home__PageFirst{
   border: 1px solid rgb(0, 255, 0);
+      width: 73%;
+      height: 54%;
 
   margin-top: 10px;
+    
+    background-image: url(@/assets/img/s1.jpg);
     background-repeat: no-repeat;
-  background-image: url(@/assets/img/s1.jpg);
+    background-position: center;
+    box-shadow: 20px 20px 50px white inset;
+
 }
 .home__PageSecond {
   border: 1px solid rgb(104, 26, 169);

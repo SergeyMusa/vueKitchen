@@ -1,7 +1,7 @@
 <template>
     <!-- {{ BTN }} -->
     <div >
-        <a class="mainBtn" :href="btnUrl">{{ btnName }}</a>
+        <a class="mainBtn 'btnStyle'" :href="btnUrl">{{ btnName }}</a>
         <!-- <input class="mainBtn" type="button" value="Input">     -->
         <!-- <button class="mainBtn">{{ msg }}</button> -->
         <!-- <button class="mainBtn" disabled>Disabled</button>  -->
@@ -13,6 +13,7 @@ export default {
     name: "MainBtn",
     props: {
     btnName: String,
+	btnStyle: String,
     btnUrl: String
     },
     computed: {
@@ -57,5 +58,10 @@ export default {
 .mainBtn:disabled {
 	background-color: #6c87b5;
 	pointer-events: none;
+}
+ /* <!-- FIXME: сделать передавать класс для изменения цвета кнопки-->         */
+.isActive .mainBtn{
+	box-shadow: 0 0 0 3px lightskyblue;
+	background-color: #2047e2;
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- src="//vk.com/js/api/openapi.js?75" -->
     <a href="https://instagram.com/mebel26.ru?igshid=YmMyMTA2M2Y=" target="_blank">
       <img class="socPict" alt="insta" src="../assets/img/soc/insta.png"
     /></a>
@@ -18,10 +17,7 @@
         alt="Telegram"
         src="../assets/img/soc/telegram.png"
       />
-      <!-- <a href="//vk.com/js/api/openapi.js?75" -->
     </a>
-          <!-- onclick="window.open('https://vk.com/@id167532858'+ window.location.href +'')" -->
-
     <a href="https://vk.com/stavmebel26" target="_blank">
       <img
         class="socPict"
@@ -41,8 +37,6 @@
         src="../assets/img/soc/mail.png"
       />
     </a>
-    <!-- <a> `& nbsp` </a> -->
-    <!-- FIXME: сделать переход на якорь-->
     <a href="#map" class="left_margin"
       ><img
         class="socPict"
@@ -59,7 +53,6 @@
 export default {
   name: "SiteHeaderSoc",
 };
-//  VK.init({apiId: 3363525, onlyWidgets: true});
 </script>
 
 <style scoped>
