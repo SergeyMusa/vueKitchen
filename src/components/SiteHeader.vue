@@ -5,7 +5,7 @@
         <img
           id="scull"
           alt="My logo"
-          src="../assets/img/logo.webp"
+          src="../assets/img/logo.jpeg"
           height="100px"
         />
       </div>

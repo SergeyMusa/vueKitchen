@@ -34,7 +34,8 @@ display: flex;
 
   height: calc(200px-20vh) ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
-  color: #1a55d2;
+  color: #19222b;
+  text-shadow: 1px 1px 1px white;
   font-size: 1.5rem;
   font-weight: bold;
   margin: 15% 15%;
@@ -45,6 +46,10 @@ display: flex;
   border-radius: 65px;
       /* box-shadow: 0 0 25px 27px rgba(255, 255, 255, 0.6); */
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
+}
+p{
+  color: white;
+  text-shadow: 1px 1px 1px #19222b;
 }
 a {
   color: #42b983;

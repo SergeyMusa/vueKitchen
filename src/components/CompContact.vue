@@ -31,4 +31,8 @@ export default {
   align-items: center;
   margin: 0 50px;
 }
+/* .requisites__info{
+display: flex;
+  flex-direction: column;
+} */
 </style>

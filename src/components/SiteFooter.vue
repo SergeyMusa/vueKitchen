@@ -2,7 +2,7 @@
   <div class="main">
     <div>
       <!-- Логотип -->
-      <img id="scull" alt="My logo" src="../assets/img/logo.webp" height="100px" />
+      <img id="scull" alt="My logo" src="../assets/img/logo.jpeg" height="100px" />
 
       © 2022 Альфа Мебель
     </div>

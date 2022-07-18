@@ -64,4 +64,8 @@ export default {
 	box-shadow: 0 0 0 3px lightskyblue;
 	background-color: #2047e2;
 }
+.mainBtn + .isActive :hover {
+	box-shadow: 0 0 0 3px lightskyblue;
+	background-color: #002fed;
+}
 </style>
