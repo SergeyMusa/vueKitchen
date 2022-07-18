@@ -12,6 +12,10 @@
     <div class="home__pageGallery">
       <CompCarousel />
     </div>
+    
+    <div class="home__pageGallery">
+      <PageAccordion />
+    </div>
 
     <div id="#map" class="home__pageMap">
       <CompContact />
@@ -25,6 +29,7 @@ import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
+import PageAccordion from "@/components/PageAccordion.vue";
 
 export default {
   name: "PageMain",
@@ -32,6 +37,7 @@ export default {
     PageFirst,
     PageSecond,
     CompCarousel,
+    PageAccordion,
     CompContact
   },
 }
@@ -40,7 +46,7 @@ export default {
 <style scoped>
 /* FIXME: переделать на флекс  */
 .home {
-  border: 1px solid rgb(11, 192, 183);
+  /* border: 1px solid rgb(11, 192, 183); */
 
   display: flex;
   flex-direction: column;
@@ -48,25 +54,22 @@ export default {
   align-items: center;
 }
 .home__PageFirst{
-  border: 1px solid rgb(0, 255, 0);
-      width: 73%;
-      height: 54%;
-
+  /* border: 1px solid rgb(0, 255, 0); */
+    width: 73%;
+    height: 54%;
   margin-top: 10px;
     
     background-image: url(@/assets/img/s1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     box-shadow: 20px 20px 50px white inset;
-
 }
 .home__PageSecond {
-  border: 1px solid rgb(104, 26, 169);
-  /* margin-top: 300px; */
+  /* border: 1px solid rgb(104, 26, 169); */
+  margin-top: 1px;
 }
 .home__pageMap{
-  border: 1px solid rgb(60, 46, 192);
-
+  /* border: 1px solid rgb(60, 46, 192); */
   margin-top: 5%;
 }
 

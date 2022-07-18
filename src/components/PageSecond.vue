@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .logo {
     border: 1px solid red;
-  margin: 100px;
+  margin: 50px;
   /* height: 324px; */
 }
 

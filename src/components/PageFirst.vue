@@ -32,19 +32,19 @@ display: flex;
   justify-content: center ;
   align-items: center;
 
-  height: 200px;
+  height: calc(200px-20vh) ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
   color: #1a55d2;
   font-size: 1.5rem;
   font-weight: bold;
-  /* opacity: 0.6; */
-  /* background: rgba(0, 0, 0, 0.2); */
-  /* box-shadow: 0 0 25px 27px white inset; */
-  /* border-radius: 15vh; */
   margin: 15% 15%;
-  
-  border-radius: 55px;
-      box-shadow: 0 0 25px 27px rgba(255, 255, 255, 0.6);
+
+  background: rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 25px 27px white inset; */
+  /* border-radius: 15vh; */ 
+  border-radius: 65px;
+      /* box-shadow: 0 0 25px 27px rgba(255, 255, 255, 0.6); */
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.8));
 }
 a {
   color: #42b983;

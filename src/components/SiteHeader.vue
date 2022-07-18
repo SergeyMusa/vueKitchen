@@ -46,7 +46,7 @@ export default {
 <style scoped>
 .main {
   /* display: inline-block; */
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 
   display: flex;
   flex-direction: row;
@@ -61,7 +61,7 @@ export default {
   padding-top: 15px;
 }
 .main__right {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   min-width: 22rem;
   padding-top: 15px;
