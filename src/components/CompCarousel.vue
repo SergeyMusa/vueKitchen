@@ -24,6 +24,7 @@
         @slide="$refs.vueperslides1.goToSlide($event.currentSlide.index, { emit: false })"
         :visible-slides="slides.length"
         fixed-height="75px"
+        fixed-width="100px"
         :bullets="false"
         :touchable="false"
         :gap="2.5"
@@ -56,19 +57,38 @@ import 'vueperslides/dist/vueperslides.css'
       {
         title: 'Кухня 23 из дуба',
       content: 'Стоит 200 тыс.руб.',
-      // You can also provide a URL for the image.
-      image: require('@/assets/img/k/k1.jpg')
+      image: require('@/assets/img/1/1.jpg')
       },
       {
         title: 'Кухня 2233 из дуdsfdsfdsf',
         content: 'Slide 2 content.',
-        image: require('@/assets/img/k/k2.jpg')
+        image: require('@/assets/img/1/2.jpg')
       },
       {
-        title: 'Кухня 111 из дdfdsfsdffdsf',
-        content: 'Slide 3 content.',
-        image: require('@/assets/img/k/k3.jpg')
-      }
+        title: 'Кухня 2233 из дуdsfdsfdsf',
+        content: 'Slide 2 content.',
+        image: require('@/assets/img/1/3.jpg')
+      },
+            {
+        title: 'Кухня 2233 из дуdsfdsfdsf',
+        content: 'Slide 2 content.',
+        image: require('@/assets/img/1/4.jpg')
+      },
+            {
+        title: 'Кухня 2233 из дуdsfdsfdsf',
+        content: 'Slide 2 content.',
+        image: require('@/assets/img/1/5.jpg')
+      },
+            {
+        title: 'Кухня 2233 из дуdsfdsfdsf',
+        content: 'Slide 2 content.',
+        image: require('@/assets/img/1/6.jpg')
+      },
+            {
+        title: 'Кухня 2233 из дуdsfdsfdsf',
+        content: 'Slide 2 content.',
+        image: require('@/assets/img/1/7.jpg')
+      },
     ]
     
   })

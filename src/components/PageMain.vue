@@ -9,17 +9,26 @@
       <PageSecond />
     </div>
     
-    <div class="home__pageGallery">
+    <div class="home__Gallery">
       <CompCarousel />
     </div>
     
-    <div class="home__pageGallery">
-      <PageAccordion />
+    <div class="home__Accordion">
+      <CompAccordion />
     </div>
 
+    <div class="home__Slider">
+      <CompSlider />
+      slider
+    </div>
+
+  <div>
+       <CompJson /> 
+    </div>
     <div id="#map" class="home__pageMap">
       <CompContact />
     </div>
+    
   </div>
 </template>
 
@@ -29,7 +38,9 @@ import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
-import PageAccordion from "@/components/PageAccordion.vue";
+import CompSlider from "@/components/CompSlider.vue";
+import CompAccordion from "@/components/CompAccordion.vue";
+import CompJson from "@/components/CompJson.vue";
 
 export default {
   name: "PageMain",
@@ -37,7 +48,9 @@ export default {
     PageFirst,
     PageSecond,
     CompCarousel,
-    PageAccordion,
+    CompSlider,
+    CompAccordion,
+      CompJson,
     CompContact
   },
 }
@@ -72,5 +85,10 @@ export default {
   /* border: 1px solid rgb(60, 46, 192); */
   margin-top: 5%;
 }
-
+/* .vueperslide__title{
+      border: 1px solid red;
+}
+p{
+      border: 1px solid blue;
+} */
 </style>

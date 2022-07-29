@@ -1,0 +1,121 @@
+{
+    "jTitle": "Тесты на должность системного администратора",
+    "create": "MusaSP",
+    "result": null,
+    "attempt": 0,
+    "Klassik": [
+        {
+            "number": 1,
+            "id": 317,
+            "title": "Кухня Амелия",
+            "material": "МДФ",
+            "colorFrame": "Светлая слоновая кость (RAL 1015)",
+            "colorFasad": "Бежевый (RAL 1015)",
+            "glass": "not",
+            "frame": "710",
+            "countertop": "Винтаж (2326)",
+            "wall": "not",
+            "cost": "35000",
+            "size": "1м x 1м x 1м",
+            "imgPath": "@/assets/317",
+            "imgSum": "5",
+            "productionTime": "28"
+        },
+        {
+            "number": 2,
+            "id": 314,
+            "title": "Кухня Амелия",
+            "material": "Массив дуба",
+            "colorFrame": "Неаполь Браво, Черный с серебряной патиной",
+            "colorFasad": "Черный (RAL xxx)",
+            "glass": "Витраж",
+            "frame": "710",
+            "countertop": "Искусственный камень Хрусталь 602",
+            "wall": "Плитка",
+            "cost": "52000",
+            "size": "1м x 1м x 1м",
+            "productionTime": "48"
+        },
+        {
+            "number": 3,
+            "id": 314,
+            "title": "Кухня Амелия",
+            "material": "Массив дуба",
+            "colorFrame": "Неаполь Браво, Черный с серебряной патиной",
+            "colorFasad": "Черный (RAL xxx)",
+            "glass": "Витраж",
+            "frame": "710",
+            "countertop": "Искусственный камень Хрусталь 602",
+            "wall": "Плитка",
+            "cost": "52000",
+            "size": "1м x 1м x 1м",
+            "productionTime": "48"
+        }
+    ],
+
+    "Modern": [
+        {
+            "number": 1,
+            "id": 307,
+            "title": "Неоклассика",
+            "material": "МДФ",
+            "colorFrame": "ДубФактурный Белый 350 + РоялВуд Голубой 376",
+            "colorFasad": "Белый",
+            "glass": "Сатин",
+            "frame": "710",
+            "countertop": "Винтажное дерево (063)",
+            "wall": "Винтажное дерево (063)",
+            "cost": "28000",
+            "size": "1.8м х 3.3м х 1.3м",
+            "productionTime": "28"
+        },
+        {
+            "number": 2,
+            "id": 314,
+            "title": "Кухня Амелия",
+            "material": "Массив дуба",
+            "colorFrame": "Неаполь Браво, Черный с серебряной патиной",
+            "colorFasad": "Черный (RAL xxx)",
+            "glass": "Витраж",
+            "frame": "710",
+            "countertop": "Искусственный камень Хрусталь 602",
+            "wall": "Плитка",
+            "cost": "52000",
+            "size": "1м x 1м x 1м",
+            "productionTime": "48"
+        }
+    ],
+     
+    "HiTech": [
+        {
+            "number": 1,
+            "id": 313,
+            "title": "Интегро",
+            "material": "МДФ",
+            "colorFrame": " NSC S 0505-Y20R",
+            "colorFasad": "Белый платиновый W980",
+            "glass": "not",
+            "frame": "710",
+            "countertop": "Дуб Риббек (0217)",
+            "wall": "Плитка",
+            "cost": "35000",
+            "size": "1м x 1м x 1м",
+            "productionTime": "28"
+        },
+        {
+            "number": 2,
+            "id": 314,
+            "title": "Кухня Амелия",
+            "material": "Массив дуба",
+            "colorFrame": "Неаполь Браво, Черный с серебряной патиной",
+            "colorFasad": "Черный (RAL xxx)",
+            "glass": "Витраж",
+            "frame": "710",
+            "countertop": "Искусственный камень Хрусталь 602",
+            "wall": "Плитка",
+            "cost": "52000",
+            "size": "1м x 1м x 1м",
+            "productionTime": "48"
+        }
+    ]
+}
