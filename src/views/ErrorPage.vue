@@ -14,6 +14,9 @@
 </template>
 
 <script>
+export default {
+  name: "ErrorPage",
+};
 // const lines = 5;
 // let rez = "";
 // for (let i = 1; i < lines; +i) {
