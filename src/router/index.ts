@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PageMain from '../components/PageMain.vue'
+import PageMain from '../views/PageMain.vue'
 import NotFound from '../views/ErrorPage.vue'
 import KitchenPlans from '../views/KitchenPlans.vue'
 import KitchenAfter from '../views/KitchenAfter.vue'

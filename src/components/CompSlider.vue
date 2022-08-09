@@ -1,6 +1,6 @@
 <template>
     <div class="slider">
-       <!-- TODO: -->     
+       <!-- FIXME: -->     
       <hr>
 
         <!-- <button @click="appendSlide" >

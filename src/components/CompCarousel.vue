@@ -2,6 +2,11 @@
     <div class="slider">
        <!-- TODO: -->     
       <hr>
+
+      <h1>
+        <CCard msg="QAZWSX"/>
+      </h1>
+
       <vueper-slides
         ref="vueperslides1"
         :touchable="false"
@@ -44,14 +49,19 @@
 </template>
 
 <script>
+import CCard from "@/components/CCard.vue"
+
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
 
   export default {
     name: "CompCarousel",
     components: {
-      VueperSlides, VueperSlide
+      CCard,
+      VueperSlides, 
+      VueperSlide
     },
+
     data: () => ({
     slides: [
       {
