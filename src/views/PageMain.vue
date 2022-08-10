@@ -16,6 +16,10 @@
     <div class="home__Accordion">
       <CompAccordion />
     </div>
+    
+    <div class="home__AccordionW">
+      <CompAccordionW />
+    </div>
 
     <div class="home__Slider">
       <CompSlider />
@@ -40,6 +44,8 @@ import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
 import CompSlider from "@/components/CompSlider.vue";
 import CompAccordion from "@/components/CompAccordion.vue";
+import CompAccordionW from "@/components/CompAccordionW.vue";
+
 import CompJson from "@/components/CompJson.vue";
 
 export default {
@@ -50,6 +56,7 @@ export default {
     CompCarousel,
     CompSlider,
     CompAccordion,
+    CompAccordionW,
       CompJson,
     CompContact
   },

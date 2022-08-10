@@ -1,142 +1,96 @@
 <template>
-  <div>
-    <h1>accordion</h1>
-    <div class="container" >
-      <accordions class="title" title="Мебель под заказ">
-        <div class="pb-5">
-          <p style="text-align: justify">Обратитесь в "MEBEL"!</p>
-          <p style="text-align: justify">
-            Итак, недавно вы решили
-            <strong>купить корпусную мебель</strong> (кухни, шкафы, стенку,
-            прихожую, спальню и т.п.) в Ставрополе, которая обладает
-            нестандартными размерами или же специальной конфигурацией, необычной
-            цветовой гаммой, то есть параметрами, которые не применяются при
-            изготовлении стандартных моделей мебели.
-          </p>
-          <p style="text-align: justify">
-            Если вы решили привнести в интерьер вашего дома нечто необычное и
-            индивидуальное, тогда обратитесь в "MEBEL"! Мы выполняем
-            изготовление на заказ корпусной мебели практически любой сложности
-            по ценам, которые вас приятно удивят! Позвоните нам по
-            телефону&nbsp;8-988-759-77-29&nbsp;и оставьте заявку на&nbsp;выезд
-            дизайнера-замерщика&nbsp;с образцами материалов для создания вашей
-            уникальной мебели!
-          </p>
-        </div>
-      </accordions>
-
-      <accordions title="Предварительный этап">
-        <div class="pb-5">
-          <p style="text-align: justify">
-            Специалист нашей компании в согласованный с вами день замерит
-            помещение, прорисует предварительный эскиз корпусной мебели на
-            заказ, согласует с вами схему ее расстановки, а также материалы,
-            фурнитуру, комплектацию мебели и обсудит стоимость заказа. Если вы
-            не готовы поделиться собственными дизайнерскими идеями, наш
-            специалист предложит вам варианты оформления корпусной мебели.
-          </p>
-          <p style="text-align: justify">
-            В случае вашего положительного решения на изготовление корпусной
-            мебели силами нашей компании вы заключаете договор и вносите 50%
-            предоплату от стоимости изделия. В данном случае выезд специалиста
-            по г. Ставрополю для вас будет совершенно бесплатным. После
-            заключения договора вы можете внести изменения в разработанный
-            совместно с нашим специалистом проект корпусной мебели в течение 3х
-            рабочих дней.
-          </p>
-        </div>
-      </accordions>
-
-      <accordions title="Сроки изготовления мебели">
-        <div class="pb-5">
-          <p style="text-align: justify">
-            Ваша мебель будет изготавливаться силами наших ответственных
-            профессиональных мастеров в течение 15-45 рабочих дней со дня
-            подписания договора (срок варьируется в зависимости от объема заказа
-            и сложности исполнения проекта).<br />После доставки готовой
-            корпусной мебели вы осуществляете окончательный расчет.<br />Сборка
-            корпусной мебели осуществляется в согласованный с вами день
-            представителями фабрики. Стоимость сборки составляет 10% от цены
-            изделия и оплачивается отдельно.
-          </p>
-        </div>
-      </accordions>
-
-      <accordions title="Наши преимущества">
-        <div class="pb-5">
-          <p style="text-align: justify">
-            Наши преимущества:<br />- возможность воплотить в жизнь ваш
-            индивидуальный проект;<br />- высокое качество и надежность
-            мебельной продукции;<br />- гарантия на корпусную мебель составляет
-            целых 18 месяцев, а также включает в себя бессрочное
-            послегарантийное обслуживание;<br />- наличие собственного
-            производства позволяет нам быстро выполнять заказ (Вам не придется
-            долго ждать выполнения или доставки заказа, выезда специалиста для
-            замера;<br />- превосходное соотношение цены и качества мебели;<br />-
-            возможность изготовления прямых и радиусных фасадов, а также
-            эмалевых фасадов;<br />- огромное разнообразие фасадных цветов,
-            мебельных аксессуаров и фурнитуры;<br />- разнообразные и
-            качественные материалы для создания фасадов, а именно:
-          </p>
-          <ul>
-            <li style="text-align: justify">ДСП и ламинированная ДСП;</li>
-            <li style="text-align: justify">МДФ пластик;</li>
-            <li style="text-align: justify">МДФ с пленкой ПВХ;</li>
-            <li style="text-align: justify">МДФ эмаль;</li>
-            <li style="text-align: justify">массив (дуб, бук, ясень);</li>
-          </ul>
-          <p style="text-align: justify">
-            - подетальный просчет цены при составлении эскиза.
-          </p>
-          <p style="text-align: justify">
-            Вы можете также составить свой эскиз кухни и переслать нам по
-            электронной почте и мы рассчитаем стоимость изделия.
-          </p>
-        </div>
-      </accordions>
-
-      <accordions title="Sypha Belnades">
-        <div class="pb-5">
-          Lorem ipsum dolor sit amet, ut alii voluptaria est, ad illum inimicus
-          deterruisset eam. His eu bonorum adipisci definiebas, no vis nostrud
-          conclusionemque. Ad his virtute accusata, pro habemus singulis
-          temporibus ut, ne bonorum dolores euripidis quo. No nam amet erant
-          intellegebat. Rationibus instructior id pri, vis case abhorreant ea,
-          id sea meis feugiat.
-        </div>
-      </accordions>
-    </div>
+  <div id="CompAccordionW">
+     <zz-accordion v-bind:contents.sync="contents"></zz-accordion>
   </div>
 </template>
 
 <script>
-var accordions = {
-  props: ["title"],
-  data() {
-    return {
-      active: false,
-    };
-  },
-  template: `
-            <div class="">
-                <div class="tab__header">
-                    <a href="#" class="tab__link p-4 block bg-blue-dark hover:bg-blue-darker no-underline text-white border-b-2 border-white flex justify-between" @click.prevent="active = !active">
-                        <strong>{{title}}</strong>
-                        <span class="down-Arrow" v-show="!active">&#9660;</span>
-                        <span class="up-Arrow" v-show="active">&#9650;</span>
-                    </a>
-                </div>
-                <div class="tab__content p-2" v-show="active"><slot /></div>            
-            </div>
-`,
-};
+import Vue from 'vue'
 
 export default {
-  name: "PageAccordion",
-  components: {
-    accordions,
+  name: 'CompAccordionW',
+  //   components: {
+  //   // CAccordionHeader,
+  // },
+  data: function() {
+  return {
+		contents: [{
+			title: 'Lorem ipsum dolor sit amet',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			active: false
+		}, {
+			title: 'Ut enim ad minim veniam',
+			description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+			active: false
+		}, {
+			title: 'Duis aute irure dolor in reprehenderit',
+			description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+			active: false
+		}, {
+			title: 'Excepteur sint occaecat cupidatat non proident',
+			description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+			active: false
+		}]
+	}
+},
+}
+
+Vue.component('zz-accordion', {
+	props: {
+    contents: Array
   },
-};
+	data: function() {
+		return {
+			TweenLite: '',		
+			Elastic: '',
+			Bounce: '',
+    }
+	},
+	methods: {
+		expand: function(event={1:1, 2:2}, i) {
+			event.preventDefault();
+
+			let el = this.$refs['accordion-body-' + i][0];
+
+			if (this.contents[i].active === false) {
+				this.props.contents[i].active = true;
+
+				this.TweenLite.to(el, 1, {
+					height: el.scrollHeight,
+					ease: this.Elastic.easeOut.config(1, 0.3)
+				});
+			} else {
+				this.props.contents[i].active = false;
+
+				this.TweenLite.to(el, 0.5, {
+					height: 0,
+					ease: this.Bounce.easeOut
+				});
+			}
+		}
+	},
+	template: `
+<div class="accordion">
+	<div
+		class="accordion-item"
+		v-for="content, i in contents"
+		v-bind:class="{ 'accordion-active': content.active }"
+	>
+		<div class="accordion-header">
+			<a href="#" v-on:click="expand(event, i)">
+				<div class="accordion-header-div">{{ content.title }}</div>
+				<div class="accordion-header-div">
+					<div class="accordion-caret"></div>
+				</div>
+			</a>
+		</div>
+		<div class="accordion-body" v-bind:ref="'accordion-body-' + i">
+			<div class="accordion-content">{{ content.description }}</div>
+		</div>
+	</div>
+</div>
+`
+});
 
 // ----------
 
@@ -171,7 +125,7 @@ export default {
 //         нам по телефону&nbsp;8-988-759-77-29&nbsp;и оставьте заявку
 //         на&nbsp;выезд дизайнера-замерщика&nbsp;с образцами материалов
 //         для создания вашей уникальной мебели!
-//       </p>
+//       </p> 
 //     `
 //   },
 //   {
@@ -213,7 +167,7 @@ export default {
 //           согласованный с вами день представителями фабрики. Стоимость
 //           сборки составляет 10% от цены изделия и оплачивается отдельно.
 //         </p>
-//       </div>
+//       </div>    
 //       `
 //   },
 //   {
@@ -274,7 +228,7 @@ export default {
 //                 Мы сможем помочь вам в создании интерьера, о котором вы всегда
 //                 мечтали!
 //               </p>
-//             </div>
+//             </div>  
 //       `
 //   },
 //   {
@@ -297,35 +251,91 @@ export default {
 //                 кухни, стенки, прихожие на заказ, а также любую другую корпусную
 //                 мебель!
 //               </p>
-//             </div>
+//             </div> 
 //       `
 //   },
 // ]
+
 </script>
 
 <style scoped>
-/* body {
-  background-color: #f1f5f8;
-} */
-/* container mx-auto bg-white border-grey-light border mt-20 */
-.title{
-	/* display: flex; */
-	
-	color: #fff;
-	border-bottom-width: 2px;
-	border-color: #fff;
-    background-color: #2779bd;
+#CompAccordionW {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
 
-
-	background: white;
-	margin-right: auto !important;
-	margin-left: auto !important;
-	border-color: grey;
-	border: 1px;
-	margin-top: 20px;
-
+/* #app { */
+  margin: 3.75em auto;
+  padding: 0.75em;
+  max-width: 350em;
 }
-.pb-5{
-	color: black;
+.container {
+  margin-bottom: 1.5em;
 }
+.btn-action-delete {
+  color: #cc4b37;
+  cursor: pointer;
+}
+.accordion {
+  padding: 0;
+}
+.accordion div:not(:last-child) {
+  border-bottom: 1px solid rgba(10, 10, 10, 0.1);
+}
+.accordion div:last-child .accordion-item-details {
+  border-radius: 5px;
+}
+.accordion dd {
+  margin-left: 0;
+}
+.accordion-item-trigger, .accordion-item-details-inner {
+  padding: 0.75rem 1.25rem;
+}
+.accordion-item-title {
+  position: relative;
+}
+.accordion-item-title h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  padding-right: 1.25rem;
+}
+.accordion-item-trigger {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+}
+.accordion-item-trigger-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 1.25rem;
+  bottom: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #363636;
+  border-bottom: 2px solid #363636;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.is-active .accordion-item-trigger-icon {
+  transform: translateY(2px) rotate(225deg);
+}
+.accordion-item-details {
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+.accordion-item-enter-active, .accordion-item-leave-active {
+  will-change: height;
+  transition: height 0.2s ease;
+}
+.accordion-item-enter, .accordion-item-leave-to {
+  height: 0 !important;
+}
+
+  /* width: 40%; */
+
 </style>
