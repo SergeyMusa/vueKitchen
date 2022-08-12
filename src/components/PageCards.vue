@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="PageCards">
         PageCards
         <div class="selector">
         <div class="el"></div>
@@ -19,7 +19,9 @@ export default {
 </script>
 
 <style scoped>
-
+.PageCards{
+    /* width: 80vw;   */
+}
 .selector {
         display: flex;
         gap: 20px;

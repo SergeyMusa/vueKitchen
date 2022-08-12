@@ -26,6 +26,7 @@ export {i};
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .firstPage{
+  
   /* border: 1px solid rgb(188, 176, 13); */
 display: flex;
   flex-direction: column;

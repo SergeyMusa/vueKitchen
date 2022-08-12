@@ -4,7 +4,7 @@
       <hr>
 
       <h1>
-        <CCard msg="QAZWSX"/>
+        <CModalElements msg="Переданное из Карусели сообщение"/>
       </h1>
 
       <vueper-slides
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import CCard from "@/components/CCard.vue"
+import CModalElements from "@/components/CModalElements.vue"
 
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
@@ -57,7 +57,7 @@ import 'vueperslides/dist/vueperslides.css'
   export default {
     name: "CompCarousel",
     components: {
-      CCard,
+      CModalElements,
       VueperSlides, 
       VueperSlide
     },
@@ -107,7 +107,9 @@ import 'vueperslides/dist/vueperslides.css'
 
 <style scoped>
 .slider{
-  width: 75vw;
+  width: 80vw;
+      border: 1px solid rgb(214, 125, 9);
+
 }
 .thumbnails {
   margin: auto;

@@ -7,7 +7,7 @@
         <!-- переменная
         :popupName=test -->
          <!--  \/  -->
-    <vPopup 
+    <CModal 
         v-if="isInfoPopupVisible" 
         @closePopup="closeInfoPopup"
         rightBtnTitle="Add-Cart" 
@@ -23,7 +23,7 @@
             {{ msg.toUpperCase() }}
         </div>
         
-    </vPopup>
+    </CModal>
 
     <button class="v-catalog-item__show-info" @click="showPopupInfo">
       Show info
@@ -38,12 +38,12 @@
 </template>
 
 <script>
-import vPopup from "@/components/v-popup.vue";
+import CModal from "@/components/CModal.vue";
 
 // import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 export default {
-  name: "CCard",
+  name: "CModalElements",
   props: {
     msg: String
   },
@@ -54,7 +54,7 @@ export default {
     };
   },
   components: {
-    vPopup,
+    CModal,
   },
   methods: {
     showPopupInfo() {

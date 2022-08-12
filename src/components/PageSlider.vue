@@ -3,19 +3,6 @@
     <!-- FIXME: -->
     <hr />
 
-    <!-- <button @click="appendSlide" >
-          <i class="icon material-icons">add</i> Add Slide
-        </button>
-        <button @click="removeSlide" >
-          <i class="icon material-icons">remove</i> Remove Slide
-        </button>
-        <button @click="toggleSlideshow" >
-          <i class="icon material-icons"> {{ slideshowDisabled ? 'check_circle' : 'highlight_off'}}</i> {{ slideshowDisabled ? 'Enable' : 'Disable' }} Slideshow
-        </button> -->
-
-        <!-- <vueper-slides
-          :disable="slideshowDisabled" -->
-
     <vueper-slides
       :slide-ratio="0.2"
       :infinite="false"
@@ -28,15 +15,13 @@
         :image="slide.image"
         :title="slide.title"
         :content="slide.content"
-        :style="'background-color: ' + ['red'][i % 2]"
+        :style="'background-color: ' + ['red'][i % 2]" height='30vh'
       />
       <!-- :style="'background-color: ' + ['#ff5252', '#42b983'][i % 2]" /> -->
     </vueper-slides>
 
     <hr />
-    <!-- <a href="#insta"
-          ><img class="socPict" alt="insta" src="../assets/img/k/k1.jpg"
-        /></a> -->
+
   </div>
 </template>
 
@@ -45,7 +30,7 @@ import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 
 export default {
-  name: "CompSlider",
+  name: "PageSlider",
   components: {
     VueperSlides,
     VueperSlide,
@@ -76,12 +61,15 @@ export default {
 <style scoped>
 .slider {
   border: 1px solid rgb(0, 255, 0);
-  width: 75vw;
+  width: 80vw;
+  height: 31vh;
 }
-
-.vueperslide__title {
+.vueperslides__parallax-wrapper{
+  padding-bottom: 40%;
+}
+/* .vueperslides__title {
   border: 1px solid red;
-}
+} */
 p {
   border: 1px solid blue;
 }

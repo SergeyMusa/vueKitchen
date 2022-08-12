@@ -14,15 +14,15 @@
     </div>
     
     <div class="home__Accordion">
-      <CompAccordion />
+      <PageAccordion />
     </div>
     
-    <div class="home__AccordionW">
+    <!-- <div class="home__AccordionW">
       <CompAccordionW />
-    </div>
+    </div> -->
 
     <div class="home__Slider">
-      <CompSlider />
+      <PageSlider />
       slider
     </div>
 
@@ -42,9 +42,9 @@ import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
-import CompSlider from "@/components/CompSlider.vue";
-import CompAccordion from "@/components/CompAccordion.vue";
-import CompAccordionW from "@/components/CompAccordionW.vue";
+import PageSlider from "@/components/PageSlider.vue";
+import PageAccordion from "@/components/PageAccordion.vue";
+// import CompAccordionW from "@/components/CompAccordionW.vue";
 
 import CompJson from "@/components/CompJson.vue";
 
@@ -54,9 +54,9 @@ export default {
     PageFirst,
     PageSecond,
     CompCarousel,
-    CompSlider,
-    CompAccordion,
-    CompAccordionW,
+    PageSlider,
+    PageAccordion,
+    // CompAccordionW,
       CompJson,
     CompContact
   },
@@ -65,6 +65,7 @@ export default {
 
 <style scoped>
 /* FIXME: переделать на флекс  */
+
 .home {
   /* border: 1px solid rgb(11, 192, 183); */
 
@@ -73,10 +74,17 @@ export default {
   justify-content: space-between ;
   align-items: center;
 }
+.home__Accordion {
+  border: 1px solid rgb(11, 192, 183); 
+}
 .home__PageFirst{
   /* border: 1px solid rgb(0, 255, 0); */
-    width: 73%;
-    height: 54%;
+
+      width: 80%;
+    height: 55%;
+
+    /* width: 80vw;
+    height: 56vh; */
   margin-top: 10px;
     
     background-image: url(@/assets/img/s1.jpg);

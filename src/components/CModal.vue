@@ -1,6 +1,6 @@
 <template>
   <!-- TODO: -->
-  <div class="popup_wraper" ref="popup_wraper">
+  <div class="popup_wrapper" ref="popup_wrapper">
     <div class="v-popup">
       <div class="v-popup__header">
         <span>{{ popupName }}</span>
@@ -8,10 +8,7 @@
           <i class="material-icons close-btn" @click="closePopup">
             arrow_circle_down
           </i>
-          <!-- <i class="icon">close-box</i> -->
-          <!-- <MenuIcon close-circle /> -->
-          <!-- <MenuIcon1 close /> -->
-          <MenuIcon3 />
+          <MenuIcon />
         </span>
       </div>
       <div class="v-popup__content">
@@ -26,22 +23,12 @@
 </template>
 
 <script>
-// import MenuIcon1 from "vue-material-design-icons/Menu.vue";
-// import "vue-material-design-icons/styles.css";
-// import '~material-design-icons-iconfont/src/material-design-icons';
-// import MenuIcon from '@mdi/font';
-// import MenuIcon2 from 'vue-material-design-icons';
-import MenuIcon3 from "material-design-icons-iconfont";
-// import MenuIcon4 from 'material-design-icons';
-// Vue.component('menu-icon', MenuIcon);
+import MenuIcon from "material-design-icons-iconfont";
 
 export default {
-  name: "v-popup",
+  name: "CModal",
   components: {
-    // MenuIcon,
-    // MenuIcon1,
-    // MenuIcon2,
-    MenuIcon3,
+    MenuIcon,
   },
   props: {
     rightBtnTitle: {
@@ -68,7 +55,7 @@ export default {
   mounted() {
     let vm = this;
     document.addEventListener('click', function(item) {
-        if (item.target === vm.$refs['popup_wraper']) {
+        if (item.target === vm.$refs['popup_wrapper']) {
             vm.closePopup();
         }
     })
@@ -77,15 +64,8 @@ export default {
 </script>
 
 <style lang="scss">
-// .material-design-icon.icon {
-//   height: 2em;
-//   width: 2em;
-// }
-// .material-design-icon.icon-2x {
-//   height: 2em;
-//   width: 2em;
-// }
-.popup_wraper{
+
+.popup_wrapper{
     background: rgba(64,64,64, .4);
     display: flex;
     justify-content: center;
@@ -93,6 +73,7 @@ export default {
     // FIXME:
     // надо переделать, не корректно работает
     position: absolute;
+    // height: 100%;
     right: 0;
     left: 0;
     top: 0;
@@ -106,6 +87,7 @@ export default {
   background: #fff;
   box-shadow: 0 0 17px 0 #7c7c7c;
   z-index: 10;
+
   &__header,
   &__footer {
     display: flex;
@@ -117,7 +99,16 @@ export default {
     justify-content: center;
     align-items: center;
   }
+  // FIXME: добавить плавность появления
+    // opacity: 0;
+    // visibility: hidden;
+    // // animation: ani 1.5s forwards;
+    //     transition: 0.55s opacity, 0.55s visibility;
+
+    // opacity: 1;
+    // visibility: visible;
 }
+
 .submit_btn,
 .close_modal {
   padding: 8px;
