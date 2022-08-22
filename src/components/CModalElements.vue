@@ -8,7 +8,6 @@
     <!--  \/  -->
     <slot>
       <cModal
-        slot="modal"
         v-if="isInfoPopupVisible"
         @closePopup="closeInfoPopup"
         rightBtnTitle="Add-Cart"

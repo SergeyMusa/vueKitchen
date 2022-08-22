@@ -12,7 +12,7 @@
         </span>
       </div>
       <div class="v-popup__content">
-        <slot name="modal"/>
+        <slot />
       </div>
       <div class="v-popup__footer">
         <button class="close_modal" @click="closePopup">Close</button>
