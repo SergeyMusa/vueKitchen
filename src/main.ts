@@ -1,13 +1,32 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import BaseBtn from "@/components/base/BaseBtn.vue";
+import upperFirst from "lodash/upperFirst";
+import camelCase from "lodash/camelCase";
 
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 // Vue.use(VueAwesomeSwiper);
+const requireComponent = require.context(
+  "./components/base/",
+  false,
+  /Base[A-Z]\w+\.(vue|js)$/
+);
+requireComponent.keys().forEach((fileName) => {
+  const componentConfig = requireComponent(fileName);
+
+  const last = fileName.split("/").pop();
+  if (last == undefined) throw Error("This has never happened before.");
+
+  // Compiler now will 'know' that last is a string.
+  const componentName = upperFirst(camelCase(last.replace(/\.\w+$/, "")));
+
+  // const componentName = upperFirst(camelCase(fileName.split('/').pop()!.replace(/\.\w+$/, '') ) )
+  Vue.component(componentName, componentConfig.default || componentConfig);
+});
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount("#app");

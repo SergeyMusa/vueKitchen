@@ -1,6 +1,6 @@
 <template>
  <!-- FIXME: -->
-  <div class="main">
+  <div class="error">
     <div class="h">
       <h1>404</h1>
       <h2>Похоже вы немного заплутали, вернитесь назад</h2>
@@ -29,7 +29,9 @@ export default {
 </script>
 
 <style scoped>
-.main {
+.error {
+  border: 1px solid blue;
+
   background-image: "url(404.jpg)";
   width: "99%";
   height: "88%";

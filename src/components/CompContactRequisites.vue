@@ -10,7 +10,7 @@
       <!-- <p class="tab leftstr isActive" @click="doActiv" :class="classActive == 'true' ? 'isActive' : 'hidde'"><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" btnStyle="isActive" /></p> -->
 
       <p class="tab1 " @click="show = !show">
-        <MainBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`" />
+        <BaseBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`" />
       </p>
       <!-- <br><br><br><br><br> -->
       <!-- <p class="tab2 rightstr " @click="show=!show"><MainBtn btnName="Контакты Реквизиты" btnUrl="#tab_Реквизиты" /></p> -->
@@ -60,7 +60,7 @@
       </ul>
       <hr />
       <p>Заказы обратного звонка через сайт принимаются круглосуточно!</p>
-      <MainBtn btnName="Заказать  📞 " btnUrl="#call" />
+      <BaseBtn btnName="Заказать  📞 " btnUrl="#call" />
       <!-- <a href="/katalog" target="_self" class="button primary"> -->
       <!-- <span>КАТАЛОГ</span> -->
       <!-- </a> -->
@@ -93,12 +93,12 @@
 </template>
 
 <script>
-import MainBtn from "@/components/MainBtn.vue";
+// import MainBtn from "@/components/base/BaseBtn.vue";
 
 export default {
   name: "CompContactRequisites",
   components: {
-    MainBtn,
+    // MainBtn,
   },
   data() {
     return {

@@ -4,10 +4,12 @@
     <p>
       собственное производство и минимальные сроки изготовления 
     </p>
+   
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'FirstPage',
   data() {

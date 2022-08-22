@@ -4,19 +4,25 @@
       <PageFirst msg="Лучшие кухни Ставрополя" />
       <!-- <img alt="Vue logo" src="img/logo.webp"> -->
     </div>
-  
+
     <div class="home__PageSecond">
       <PageSecond />
     </div>
-    
+
+    <div>
+      <!-- <CompHowWorks /> -->
+    </div>
+
     <div class="home__Gallery">
       <CompCarousel />
     </div>
-    
+
     <div class="home__Accordion">
       <PageAccordion />
+      <!-- <slot></slot>
+        </PageAccordion>  -->
     </div>
-    
+
     <!-- <div class="home__AccordionW">
       <CompAccordionW />
     </div> -->
@@ -26,13 +32,12 @@
       slider
     </div>
 
-  <div>
-       <CompJson /> 
+    <div>
+      <CompJson />
     </div>
     <div id="#map" class="home__pageMap">
       <CompContact />
     </div>
-    
   </div>
 </template>
 
@@ -43,8 +48,9 @@ import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import PageSecond from "@/components/PageSecond.vue";
 import PageSlider from "@/components/PageSlider.vue";
-import PageAccordion from "@/components/PageAccordion.vue";
+import PageAccordion from "@/components/PageAccordionElements.vue";
 // import CompAccordionW from "@/components/CompAccordionW.vue";
+// import CompHowWorks from "@/components/CompHowWorks.vue";
 
 import CompJson from "@/components/CompJson.vue";
 
@@ -57,10 +63,11 @@ export default {
     PageSlider,
     PageAccordion,
     // CompAccordionW,
-      CompJson,
-    CompContact
+    CompJson,
+    CompContact,
+    // CompHowWorks,
   },
-}
+};
 </script>
 
 <style scoped>
@@ -71,32 +78,32 @@ export default {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between ;
+  justify-content: space-between;
   align-items: center;
 }
 .home__Accordion {
-  border: 1px solid rgb(11, 192, 183); 
+  border: 1px solid rgb(11, 192, 183);
 }
-.home__PageFirst{
+.home__PageFirst {
   /* border: 1px solid rgb(0, 255, 0); */
 
-      width: 80%;
-    height: 55%;
+  width: 80%;
+  height: 55%;
 
-    /* width: 80vw;
+  /* width: 80vw;
     height: 56vh; */
   margin-top: 10px;
-    
-    background-image: url(@/assets/img/s1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 20px 20px 50px white inset;
+
+  background-image: url(@/assets/img/s1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 20px 20px 50px white inset;
 }
 .home__PageSecond {
   /* border: 1px solid rgb(104, 26, 169); */
   margin-top: 1px;
 }
-.home__pageMap{
+.home__pageMap {
   /* border: 1px solid rgb(60, 46, 192); */
   margin-top: 5%;
 }

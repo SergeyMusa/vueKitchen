@@ -12,7 +12,7 @@
         </span>
       </div>
       <div class="v-popup__content">
-        <slot />
+        <slot name="modal"/>
       </div>
       <div class="v-popup__footer">
         <button class="close_modal" @click="closePopup">Close</button>
@@ -26,7 +26,7 @@
 import MenuIcon from "material-design-icons-iconfont";
 
 export default {
-  name: "CModal",
+  name: "cModal",
   components: {
     MenuIcon,
   },

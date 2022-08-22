@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: "MainBtn",
+    name: "BaseBtn",
     props: {
     btnName: String,
 	btnStyle: String,

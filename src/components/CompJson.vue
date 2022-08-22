@@ -1,19 +1,19 @@
 <template>
     <div>
         <!-- books: { items: [] } -->
-<h1>books</h1>
+<!-- <h1>books</h1>
         <div id = "books">
             <div id = "book-name"><input type="text" name="" v-model = "bookName"></div>
             <div id = "book-button" @click = "fetchBook"><button>Choose book</button></div>
-            <!-- {{ books }} -->
+            {{ books }}
             <div class = "book" >
                 <div class = "book-title">{{ books }}</div>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="book" v-for="(book, index) in books.items"> -->
             <!-- <div class="book" v-for="(book, index) in books.items"> -->
-            <div class = "book-title">{{ book.volumeInfo.title }}</div>
+    <!-- <div class = "book-title">{{ book.volumeInfo.title }}</div> -->
         <!-- </div> -->
     </div>
 </template>

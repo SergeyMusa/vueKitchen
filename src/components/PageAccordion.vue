@@ -1,48 +1,32 @@
 <template>
   <div class="accordion">
-    <h1>accordion</h1>
-    <div class="accordContainer">
+<!-- <slot> -->
+    <h2>accordionMain</h2>
+    
+  <PageAccordionElements :accordArr="accordArr">
+    
+    <!-- <div class="accordContainer"> -->
+            <!-- {{accordArr.title}}
+              {{accordArr.details}} -->
+  <PageAccordionElements/>
+  
+    <!-- </div> -->
+    <!-- </slot> -->
 
-      <div 
-      class="accordion"
-      >
-        <div
-          class="accordTitle" 
-          @click="accordArr.active = !accordArr.active"
-            v-for="(accordArr, index) in accordArr" :key="index"
-        >
-          <!-- TODO: -->
-          <template slot>
-            {{accordArr.title}}
-            <div class="accordContent" v-show="accordArr.active">
-              {{accordArr.details}}
-            </div> 
-          </template>  
-        </div>
-
-
-      </div>
-
-    </div>
   </div>
 </template>
 
 <script>
+import PageAccordionElements from "@/components/PageAccordionElements.vue";
 
 export default {
   name: "PageAccordion",
   components: {
-    // accordions,
+    PageAccordionElements,
   },
-  // props: {
-  //   // msg: String
-  // },
   data: () => {
     return {
       isElVisible: false,
-    }
-  },
-  props: {
       accordArr: [
         {
           id: 1,
@@ -196,7 +180,7 @@ export default {
       `,
         },
       ],
-    // };
+    };
   },
   // methods: {
   //   clickElement(){
@@ -206,14 +190,6 @@ export default {
 };
 
 // ----------
-
-// new Vue({
-//   el: '#app',
-//   data: {
-//     example1: exampleData1,
-//     example2: exampleData2
-//   }
-// })
 </script>
 
 <style scoped lang="scss">
@@ -221,10 +197,13 @@ export default {
   width: 80vw;
 }
 .accordContainer {
-  /* display: flex; */
+  /* display: flex; */  
+  // border: 1px solid rgb(67, 220, 21);
+
 }
 .accordTitle {
   border: 1px solid rgb(69, 15, 139);
+// z-index: 15;
 
   color: #fff;
 
@@ -240,7 +219,7 @@ export default {
   /* border: 1px; */
   margin-top: 2px;
 
-  padding: -15px;
+  // padding: 15px;
 
   &:hover {
     cursor: pointer;
@@ -250,6 +229,8 @@ export default {
 
 .accordContent {
   border: 1px solid rgb(149, 13, 177);
+height: 100px;
+
 padding: 20px;
 // margin: 7px;
   color: black;

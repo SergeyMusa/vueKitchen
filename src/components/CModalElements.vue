@@ -1,30 +1,29 @@
 <template>
   <div class="c-card">
-    
-        <!-- строка
+    <!-- строка
         rightBtnTitle="Add-Cart"  -->
 
-        <!-- переменная
+    <!-- переменная
         :popupName=test -->
-         <!--  \/  -->
-    <CModal 
-        v-if="isInfoPopupVisible" 
+    <!--  \/  -->
+    <slot>
+      <cModal
+        slot="modal"
+        v-if="isInfoPopupVisible"
         @closePopup="closeInfoPopup"
-        rightBtnTitle="Add-Cart" 
-        :popupName=test
-
+        rightBtnTitle="Add-Cart"
+        :popupName="test"
         @rightBtnAction="addToCart"
-    >
-    <!-- TODO: -->    
+      >
+        <!-- TODO: -->
         <div>
-            <p>Props-text:_ </p>
+          <p>Props-text:_</p>
         </div>
         <div>
-            {{ msg.toUpperCase() }}
+          {{ msg.toUpperCase() }}
         </div>
-        
-    </CModal>
-
+      </cModal>
+    </slot>
     <button class="v-catalog-item__show-info" @click="showPopupInfo">
       Show info
     </button>
@@ -38,14 +37,14 @@
 </template>
 
 <script>
-import CModal from "@/components/CModal.vue";
+import cModal from "@/components/CModal.vue";
 
 // import MenuIcon from 'vue-material-design-icons/Menu.vue';
 
 export default {
   name: "CModalElements",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
@@ -54,7 +53,7 @@ export default {
     };
   },
   components: {
-    CModal,
+    cModal,
   },
   methods: {
     showPopupInfo() {
@@ -64,8 +63,8 @@ export default {
       this.isInfoPopupVisible = false;
     },
     addToCart() {
-    //   this.isInfoPopupVisible = false;
-    console.log('addToCart');
+      //   this.isInfoPopupVisible = false;
+      console.log("addToCart");
     },
   },
   computed: {},

@@ -13,7 +13,7 @@
       <div class="main__right">
         <div class="main__right__top">
           <a class="header-phone" href="tel:78652404050"> +7(8652) 404-050</a>
-          <MainBtn btnName="Заказать  📞 " btnUrl="#call" />
+          <BaseBtn btnName="Заказать  📞 " btnUrl="#call" />
           <!-- <a class="btn phone-back-call" href="#call">Заказать звонок</a> -->
         </div>
           <p>Принимаем заявки ежедневно с 9:00 до 18:00</p>
@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import MainBtn from "@/components/MainBtn.vue";
+// import MainBtn from "@/components/base/BaseBtn.vue";
 import SiteHeaderSoc from "@/components/SiteHeaderSoc.vue";
 
 export default {
   name: "SiteHeader",
   components: {
-    MainBtn,
+    // MainBtn,
     SiteHeaderSoc,
   },
 
