@@ -110,8 +110,8 @@ export default {
   /* width: 60vw; */
 
   display: flex;
-    flex-direction: column;
-  justify-content: start;
+  flex-direction: column;
+  justify-content: flex-start;
 
 text-align: left;
 
