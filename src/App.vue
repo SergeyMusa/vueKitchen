@@ -26,7 +26,6 @@ import SiteHeader from '@/components/SiteHeader.vue'
 // import PageMain from '@/components/PageMain.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
 
-
 export default {
    components: {
         SiteHeader,

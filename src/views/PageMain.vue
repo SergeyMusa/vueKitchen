@@ -5,12 +5,12 @@
       <!-- <img alt="Vue logo" src="img/logo.webp"> -->
     </div>
 
-    <div class="home__PageSecond">
-      <PageSecond />
+    <div class="home__Benefit">
+      <CBenefit />
     </div>
 
-    <div>
-      <!-- <CompHowWorks /> -->
+    <div class="home__Motivation">
+      <CompMotivation />
     </div>
 
     <div class="home__Gallery">
@@ -38,6 +38,29 @@
     <div id="#map" class="home__pageMap">
       <CompContact />
     </div>
+
+    <template>
+      <fab
+        :z-index="101"
+        :ripple-show="true"
+        :actions="fabActions"
+
+        @click="clickItem"
+      ></fab>
+      <!-- :position="bottom-left"
+        :position-type="fixed"
+        :z-index="101"
+        :ripple-show="true"
+        :main-icon="phone_callback"
+        :actions="fabActions"
+
+        @click="clickItem"
+        @cache="cache"
+        @alertMe="alert" -->
+
+      <!-- volunteer_activism -->
+      <!-- main-icon="@/assets/img/2015_moika3.jpg" -->
+    </template>
   </div>
 </template>
 
@@ -46,26 +69,50 @@
 import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
-import PageSecond from "@/components/PageSecond.vue";
+import CompMotivation from "@/components/CompMotivation.vue";
 import PageSlider from "@/components/PageSlider.vue";
 import PageAccordion from "@/components/PageAccordionElements.vue";
 // import CompAccordionW from "@/components/CompAccordionW.vue";
-// import CompHowWorks from "@/components/CompHowWorks.vue";
-
+import CBenefit from "@/components/CBenefit.vue";
+import fab from "vue-fab";
 import CompJson from "@/components/CompJson.vue";
 
 export default {
   name: "PageMain",
   components: {
     PageFirst,
-    PageSecond,
+    CompMotivation,
     CompCarousel,
     PageSlider,
     PageAccordion,
     // CompAccordionW,
     CompJson,
     CompContact,
-    // CompHowWorks,
+    CBenefit,
+    fab,
+  },
+  data() {
+    return {
+      fabActions: [
+        {
+          icon: "done",
+          title: "good job!",
+          color: "#ff9900",
+        },
+        {
+          icon: "toc",
+          title: "",
+          color: "#999",
+        },
+      ],
+      mainBtnColor: "#3eaf7c",
+    };
+  },
+  methods: {
+    clickItem: function (item) {
+      window.alert(item.idx);
+      console.log("CLICK");
+    },
   },
 };
 </script>
@@ -99,7 +146,12 @@ export default {
   background-position: center;
   box-shadow: 20px 20px 50px white inset;
 }
-.home__PageSecond {
+.home__Benefit {
+  width: 85%;
+  margin: 20px 0;
+  /* padding: 0 50px; */
+}
+.Motivation {
   /* border: 1px solid rgb(104, 26, 169); */
   margin-top: 1px;
 }

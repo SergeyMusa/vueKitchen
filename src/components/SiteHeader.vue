@@ -13,6 +13,7 @@
       <div class="main__right">
         <div class="main__right__top">
           <a class="header-phone" href="tel:78652404050"> +7(8652) 404-050</a>
+          <!-- FIXME: :class="btnStyle" -->
           <BaseBtn btnName="Заказать  📞 " btnUrl="#call" />
           <!-- <a class="btn phone-back-call" href="#call">Заказать звонок</a> -->
         </div>

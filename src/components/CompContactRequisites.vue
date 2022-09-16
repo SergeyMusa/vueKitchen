@@ -10,7 +10,8 @@
       <!-- <p class="tab leftstr isActive" @click="doActiv" :class="classActive == 'true' ? 'isActive' : 'hidde'"><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" btnStyle="isActive" /></p> -->
 
       <p class="tab1 " @click="show = !show">
-        <BaseBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`" />
+        <!-- FIXME: :btnStyle="styleTest"-->
+        <BaseBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`"  />
       </p>
       <!-- <br><br><br><br><br> -->
       <!-- <p class="tab2 rightstr " @click="show=!show"><MainBtn btnName="Контакты Реквизиты" btnUrl="#tab_Реквизиты" /></p> -->
@@ -53,7 +54,7 @@
         <li class="noMark">
           <p class="leftstr">Воскресенье</p>
           <p class="rightstr">с 10:00 до 17:00</p>
-          <!--  -->
+
           <div v-t="'message.hello'"></div>
           <p>&nbsp;</p>
         </li>
@@ -176,7 +177,7 @@ ul {
   /* display: inline; */
 }
 li{
-    /* margin-left: 160px; */
+  /* margin-left: 160px; */
 }
 .top {
   text-align: left;
@@ -197,6 +198,7 @@ li{
   border: 1px solid rgb(192, 159, 11);
   margin-bottom: 15px;
 }
+
 /* .btn{
 margin-left: 60px;
 } */

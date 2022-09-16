@@ -1,7 +1,7 @@
 <template>
     <!-- {{ BTN }} -->
     <div >
-        <a class="mainBtn 'btnStyle'" :href="btnUrl">{{ btnName }}</a>
+        <a class="mainBtn" :class="btnStyle" :href="btnUrl">{{ btnName }}</a>
         <!-- <input class="mainBtn" type="button" value="Input">     -->
         <!-- <button class="mainBtn">{{ msg }}</button> -->
         <!-- <button class="mainBtn" disabled>Disabled</button>  -->
@@ -67,5 +67,8 @@ export default {
 .mainBtn + .isActive :hover {
 	box-shadow: 0 0 0 3px lightskyblue;
 	background-color: #002fed;
+}
+.styleTest{
+	background-color: #ed00e9;
 }
 </style>
