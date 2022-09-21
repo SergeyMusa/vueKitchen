@@ -132,7 +132,7 @@ var accordions = {
 };
 
 export default {
-  name: "PageAccordion",
+  name: "PageAccordeon",
   components: {
     accordions,
   },

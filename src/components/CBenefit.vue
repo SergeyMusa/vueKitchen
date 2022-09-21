@@ -6,7 +6,7 @@
     <div class="benefit__items">
       <div class="benefit__item" v-for="item in benefitArr" :key="item.id">
         <div class="benefit__pict">
-          <!-- <img :src="require(`${item.pict}`)" height="30px" /> -->
+          <!-- <img :src="(`${item.pict}`)" height="30px" /> -->
           <img :src="require(`../assets/img/benefit/b${item.id}.png`)" height="30px" />
           <!-- <img
                 :id="benefit_{{benefitArr.id}}",
@@ -40,14 +40,14 @@ export default {
         {
           id: 1,
           header: "Гарантия 20 лет",
-          pict: "../assets/img/benefit/b1.png",
+          pict: require("../assets/img/benefit/b1.png"),
           message:
             "Мы уверены в своих кухнях благодаря собственному производству: больше никто из российских производителей не дает такой гарантии",
         },
         {
           id: 2,
           header: "22 года на рынке",
-          pict: "../assets/img/benefit/b2.png",
+          pict: require("../assets/img/benefit/b2.png"),
           message: 'Мы изготовили более 500 тысяч кухонь по индивидуальному проекту',
         },
         {

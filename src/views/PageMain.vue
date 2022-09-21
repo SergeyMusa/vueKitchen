@@ -17,13 +17,13 @@
       <CompCarousel />
     </div>
 
-    <div class="home__Accordion">
-      <PageAccordion />
+    <div class="home__Accordeon">
+      <PageAccordeon />
       <!-- <slot></slot>
-        </PageAccordion>  -->
+        </PageAccordeon>  -->
     </div>
 
-    <!-- <div class="home__AccordionW">
+    <!-- <div class="home__AccordeonW">
       <CompAccordionW />
     </div> -->
 
@@ -71,7 +71,7 @@ import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import CompMotivation from "@/components/CompMotivation.vue";
 import PageSlider from "@/components/PageSlider.vue";
-import PageAccordion from "@/components/PageAccordionElements.vue";
+import PageAccordeon from "@/components/PageAccordeon.vue";
 // import CompAccordionW from "@/components/CompAccordionW.vue";
 import CBenefit from "@/components/CBenefit.vue";
 import fab from "vue-fab";
@@ -84,7 +84,7 @@ export default {
     CompMotivation,
     CompCarousel,
     PageSlider,
-    PageAccordion,
+    PageAccordeon,
     // CompAccordionW,
     CompJson,
     CompContact,
@@ -128,8 +128,8 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-.home__Accordion {
-  border: 1px solid rgb(11, 192, 183);
+.home__Accordeon {
+  border: 1px solid rgb(17, 11, 192);
 }
 .home__PageFirst {
   /* border: 1px solid rgb(0, 255, 0); */
@@ -147,7 +147,7 @@ export default {
   box-shadow: 20px 20px 50px white inset;
 }
 .home__Benefit {
-  width: 85%;
+  width: 80%;
   margin: 20px 0;
   /* padding: 0 50px; */
 }

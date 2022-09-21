@@ -2,33 +2,42 @@
 <!-- TODO: -->
 <!-- FIXME: -->
   <div class="accordion">
-<!-- <slot> -->
-    <h2>accordionMain</h2>
     
-  <PageAccordionElements :accordArr="accordArr">
-    
-    <!-- <div class="accordContainer"> -->
-            <!-- {{accordArr.title}}
-              {{accordArr.details}} -->
-  <PageAccordionElements/>
-  
-    <!-- </div> -->
-    <!-- </slot> -->
+          <div class="accordContainer">
+            <!-- 
+              @click="accordArr.active = !accordArr.active"
+            -->
+            <div
+              class="accordTitle"
+              
+              v-for="(accordArr, index) in accordArr"
+              @click="clickElement(accordArr.id )"
+              :key="index"
+            >
+              <template>
+                <div v-html="accordArr.title" />
+                <!-- {{ accordArr.title }} -->
+                <div class="accordContent" v-show="accordArr.active" v-html="accordArr.details">
+                  <!-- {{ accordArr.details }} -->
+                </div>
+              </template>
+            </div>
+          </div>
 
   </div>
 </template>
 
 <script>
-import PageAccordionElements from "@/components/PageAccordionElements.vue";
+// import PageAccordeonElements from "@/components/PageAccordeonElements.vue";
 
 export default {
-  name: "PageAccordion",
+  name: "PageAccordeon",
   components: {
-    PageAccordionElements,
+    // PageAccordeonElements,
   },
   data: () => {
     return {
-      isElVisible: false,
+      isElVisible: 1,
       accordArr: [
         {
           id: 1,
@@ -37,7 +46,7 @@ export default {
           details: `
       <p style="text-align: justify">Обратитесь в "MEBEL"!</p>
       <p style="text-align: justify">
-        Итак, недавно вы решили
+        Итак, вы решили
         <strong>купить корпусную мебель</strong> (кухни, шкафы, стенку,
         прихожую, спальню и т.п.) в Ставрополе, которая обладает
         нестандартными размерами или же специальной конфигурацией,
@@ -45,7 +54,7 @@ export default {
         применяются при изготовлении стандартных моделей мебели.
       </p>
       <p style="text-align: justify">
-        Если вы решили привнести в интерьер вашего дома нечто необычное
+        Если вы хотите привнести в интерьер вашего дома нечто необычное
         и индивидуальное, тогда обратитесь в "MEBEL"! Мы
         выполняем изготовление на заказ корпусной мебели практически
         любой сложности по ценам, которые вас приятно удивят! Позвоните
@@ -58,7 +67,7 @@ export default {
         {
           id: 2,
           active: false,
-          title: "Предварительный этап",
+          title: "<h3>Предварительный этап</h3>",
           details: `
       <p style="text-align: justify">
         Специалист нашей компании в согласованный с вами день замерит
@@ -81,7 +90,7 @@ export default {
         {
           id: 3,
           active: false,
-          title: `Сроки изготовления мебели`,
+          title: `<h3>Сроки изготовления мебели</h3>`,
           details: `
       <div class="panel-body">
         <p style="text-align: justify">
@@ -100,7 +109,7 @@ export default {
         {
           id: 4,
           active: false,
-          title: `Наши преимущества`,
+          title: `<h3>Наши преимущества</h3>`,
           details: `
       <div class="panel-body">
               <p style="text-align: justify">
@@ -138,7 +147,7 @@ export default {
         {
           id: 5,
           active: false,
-          title: `Наша цель`,
+          title: `<h3>Наша цель</h3>`,
           details: `
       <div class="panel-body">
               <p style="text-align: justify">Наша Цель:</p>
@@ -161,7 +170,7 @@ export default {
         {
           id: 6,
           active: false,
-          title: ` Как оформить заказ на корпусную мебель?`,
+          title: `<h3> Как оформить заказ на корпусную мебель?</h3>`,
           details: `
       <div class="panel-body">
               <p style="text-align: justify">
@@ -184,11 +193,14 @@ export default {
       ],
     };
   },
-  // methods: {
-  //   clickElement(){
-  //         this.isElVisible = !this.isElVisible
-  //   }
-  // }
+  methods: {
+    clickElement(event){
+          // this.accordArr.active = !this.accordArr.active;
+          this.isElVisible = this.accordArr.id;
+          console.log(event);
+          console.log(">>>>>");
+    }
+  }
 };
 
 // ----------
@@ -231,9 +243,9 @@ export default {
 
 .accordContent {
   border: 1px solid rgb(149, 13, 177);
-height: 100px;
+// height: 100px;
 
-padding: 20px;
+padding: 0 20px;
 // margin: 7px;
   color: black;
   background: #fff;
