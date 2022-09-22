@@ -53,7 +53,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   /* width: 99%; */
-  margin: 0 1rem ;
+  margin: 0 10rem ;
   /* background-color: rgb(205, 202, 202); */
   /* opacity: 0.7;  */
   /* прозрачность */

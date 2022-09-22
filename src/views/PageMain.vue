@@ -127,6 +127,9 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  /* min-height: 100vh; */
+  flex: 1;
 }
 .home__Accordeon {
   border: 1px solid rgb(17, 11, 192);

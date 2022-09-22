@@ -52,11 +52,17 @@ export default {
   align-items: center;
   /* border: 1px solid blue; */
   /* background-size: contain ; */
+   align-items: center;
+
+  min-height: 98vh; 
 }
 .app__pageTop{
     display: flex;
   flex-direction: column;
   justify-content: flex-start ;
+
+  /* justify-content: space-between; */
+
 }
 nav {
   /* margin-top: -30px; */
