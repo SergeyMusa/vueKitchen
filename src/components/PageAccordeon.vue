@@ -11,7 +11,7 @@
               class="accordTitle"
               
               v-for="(accordArr, index) in accordArr"
-              @click="clickElement(accordArr.id )"
+              @click="clickElement(accordArr)"
               :key="index"
             >
               <template>
@@ -194,11 +194,28 @@ export default {
     };
   },
   methods: {
-    clickElement(event){
-          // this.accordArr.active = !this.accordArr.active;
-          this.isElVisible = this.accordArr.id;
-          console.log(event);
-          console.log(">>>>>");
+    clickElement(accordArr){
+          accordArr.active = !accordArr.active;
+          console.log(">>>"+accordArr);
+
+          this.isElVisible = accordArr.id;
+          // console.log("isElVisible_"+this.isElVisible);
+
+  let map = new Map;
+  map.set(accordArr);
+  for ( accordArr of map) {
+  // for (const element of accordArr.keys) {
+          // accordArr.forEach(function(item, i, accordArr) {
+            console.log(accordArr );
+
+            // if (i !== this.isElVisible) {
+            //   accordArr.active = false;
+            //   console.log(i + ": " + item + " (массив:" + accordArr + ")");
+            // }
+          }
+
+          // console.log(accordArr.id);
+          
     }
   }
 };

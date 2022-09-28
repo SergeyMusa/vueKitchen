@@ -5,6 +5,10 @@
       <!-- <img alt="Vue logo" src="img/logo.webp"> -->
     </div>
 
+    <div class="home__Present">
+      <CPresent />
+    </div>
+
     <div class="home__Benefit">
       <CBenefit />
     </div>
@@ -76,6 +80,8 @@ import PageAccordeon from "@/components/PageAccordeon.vue";
 import CBenefit from "@/components/CBenefit.vue";
 import fab from "vue-fab";
 import CompJson from "@/components/CompJson.vue";
+import CPresent from "@/components/CPresent.vue";
+
 
 export default {
   name: "PageMain",
@@ -89,6 +95,7 @@ export default {
     CompJson,
     CompContact,
     CBenefit,
+    CPresent,
     fab,
   },
   data() {
@@ -148,6 +155,11 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 20px 20px 50px white inset;
+}
+.home__Present{
+  position: fixed;
+  bottom: 50px;
+  left: 10px;
 }
 .home__Benefit {
   width: 80%;

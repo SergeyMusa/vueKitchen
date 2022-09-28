@@ -62,7 +62,7 @@ export default {
   justify-content: flex-start ;
 
   /* justify-content: space-between; */
-
+margin-bottom: 200px;
 }
 nav {
   /* margin-top: -30px; */
