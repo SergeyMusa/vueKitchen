@@ -160,6 +160,7 @@ export default {
   position: fixed;
   bottom: 50px;
   left: 10px;
+  opacity: .7;
 }
 .home__Benefit {
   width: 80%;

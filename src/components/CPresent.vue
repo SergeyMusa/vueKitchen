@@ -27,8 +27,8 @@
 
 <style scoped>
 .Present{
-    /* width: 50px;
-    height: 70px; */
+    width: 20vw;
+    /* height: 20vh; */
     /* background-color: aquamarine; */
     
 }
