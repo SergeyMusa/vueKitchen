@@ -3,21 +3,21 @@
 <!-- FIXME: -->
   <div class="accordion">
     
-          <div class="accordContainer">
-            <!-- 
-              @click="accordArr.active = !accordArr.active"
-            -->
+          <div class="accordContainer"
+          >
+          <!-- @click="accordArr.active = !accordArr.active" -->
+
             <div
               class="accordTitle"
               
-              v-for="(accordArr, index) in accordArr"
-              @click="clickElement(accordArr)"
+              v-for="(accordItem, index) in accordArr"
+              @click="clickElement(accordArr, index)"
               :key="index"
             >
               <template>
-                <div v-html="accordArr.title" />
+                <div v-html="accordItem.title" />
                 <!-- {{ accordArr.title }} -->
-                <div class="accordContent" v-show="accordArr.active" v-html="accordArr.details">
+                <div class="accordContent" v-show="accordItem.active" v-html="accordItem.details">
                   <!-- {{ accordArr.details }} -->
                 </div>
               </template>
@@ -37,7 +37,7 @@ export default {
   },
   data: () => {
     return {
-      isElVisible: 1,
+      // isElVisible: 1,
       accordArr: [
         {
           id: 1,
@@ -188,33 +188,34 @@ export default {
                 мебель!
               </p>
             </div>
-      `,
-        },
+      `
+        }
       ],
     };
   },
   methods: {
-    clickElement(accordArr){
-          accordArr.active = !accordArr.active;
-          console.log(">>>"+accordArr);
+    clickElement(newAccordArr, index){
 
-          this.isElVisible = accordArr.id;
-          // console.log("isElVisible_"+this.isElVisible);
+// чтобы остальные вкладки закрывались
+Object.keys(newAccordArr).forEach(function(id) {
+      newAccordArr[id].active = false;
+});
+          this.accordArr[index].active = !this.accordArr[index].active;
 
-  let map = new Map;
-  map.set(accordArr);
-  for ( accordArr of map) {
-  // for (const element of accordArr.keys) {
-          // accordArr.forEach(function(item, i, accordArr) {
-            console.log(accordArr );
 
-            // if (i !== this.isElVisible) {
-            //   accordArr.active = false;
-            //   console.log(i + ": " + item + " (массив:" + accordArr + ")");
-            // }
-          }
+          // console.log(`--> "accordArr_id_${index}_"+_is_${this.accordArr[index].active}`);
+          // console.dir("newAccordArr_2_"+JSON.stringify(newAccordArr)); //~~~!!! OK
+                    
+          // this.isElVisible = newAccordArr[index].id;
+          // console.log("this.isElVisible _" + this.isElVisible );
 
-          // console.log(accordArr.id);
+// Object.keys(newAccordArr).forEach(function(id) {
+//     // console.log(+(id) + 1, newAccordArr[id].active);
+
+// console.log("this.isElVisible 2_" + this.isElVisible );    
+    // if (newAccordArr[index].id !== this.isElVisible) {
+    // }
+// });
           
     }
   }
