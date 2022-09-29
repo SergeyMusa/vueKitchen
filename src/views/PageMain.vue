@@ -139,7 +139,7 @@ export default {
   flex: 1;
 }
 .home__Accordeon {
-  border: 1px solid rgb(17, 11, 192);
+  /* border: 1px solid rgb(17, 11, 192); */
 }
 .home__PageFirst {
   /* border: 1px solid rgb(0, 255, 0); */

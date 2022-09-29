@@ -1,39 +1,48 @@
 <template>
-<!-- TODO: -->
-<!-- FIXME: -->
+  <!-- TODO: -->
+  <!-- FIXME: -->
   <div class="accordion">
-    
-          <div class="accordContainer"
+    <div class="accordContainer">
+      <!-- @click="accordArr.active = !accordArr.active" -->
+      <div class="accordTitle">
+        <div
+          class="forClose"
+          v-for="(accordItem, index) in accordArr"
+          @click="clickElement(accordArr, index)"
+          :key="index"
+        >
+          <!-- <template> -->
+          <div v-html="accordItem.title" />
+          <!-- {{ accordArr.title }} -->
+          <div
+            class="accordContent"
+            v-show="accordItem.active"
+            v-html="accordItem.details"
           >
-          <!-- @click="accordArr.active = !accordArr.active" -->
-
-            <div
-              class="accordTitle"
-              
-              v-for="(accordItem, index) in accordArr"
-              @click="clickElement(accordArr, index)"
-              :key="index"
-            >
-              <template>
-                <div v-html="accordItem.title" />
-                <!-- {{ accordArr.title }} -->
-                <div class="accordContent" v-show="accordItem.active" v-html="accordItem.details">
-                  <!-- {{ accordArr.details }} -->
-                </div>
-              </template>
-            </div>
+            <!-- {{ accordArr.details }} -->
           </div>
-
+          <!-- </template> -->
+        </div>
+        <span>
+          <i class="material-icons close-btn" @click="closePopup">
+            arrow_circle_down
+          </i>
+          <MenuIcon />
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 // import PageAccordeonElements from "@/components/PageAccordeonElements.vue";
+import MenuIcon from "material-design-icons-iconfont";
 
 export default {
   name: "PageAccordeon",
   components: {
     // PageAccordeonElements,
+    MenuIcon,
   },
   data: () => {
     return {
@@ -188,37 +197,31 @@ export default {
                 мебель!
               </p>
             </div>
-      `
-        }
+      `,
+        },
       ],
     };
   },
   methods: {
-    clickElement(newAccordArr, index){
+    closePopup() {
+      // console.log("closePopup");
+      let newNewAccordArr = this.accordArr;
+      Object.keys(newNewAccordArr).forEach(function (id) {
+        newNewAccordArr[id].active = false;
+      });
+    },
+    clickElement(newAccordArr, index) {
+      // чтобы остальные вкладки закрывались
+      // Object.keys(newAccordArr).forEach(function (id) {
+      //   newAccordArr[id].active = false;
+      // });
+      this.closePopup();
+      this.accordArr[index].active = !this.accordArr[index].active;
 
-// чтобы остальные вкладки закрывались
-Object.keys(newAccordArr).forEach(function(id) {
-      newAccordArr[id].active = false;
-});
-          this.accordArr[index].active = !this.accordArr[index].active;
-
-
-          // console.log(`--> "accordArr_id_${index}_"+_is_${this.accordArr[index].active}`);
-          // console.dir("newAccordArr_2_"+JSON.stringify(newAccordArr)); //~~~!!! OK
-                    
-          // this.isElVisible = newAccordArr[index].id;
-          // console.log("this.isElVisible _" + this.isElVisible );
-
-// Object.keys(newAccordArr).forEach(function(id) {
-//     // console.log(+(id) + 1, newAccordArr[id].active);
-
-// console.log("this.isElVisible 2_" + this.isElVisible );    
-    // if (newAccordArr[index].id !== this.isElVisible) {
-    // }
-// });
-          
-    }
-  }
+      // console.log(`--> "accordArr_id_${index}_"+_is_${this.accordArr[index].active}`);
+      // console.dir("newAccordArr_2_"+JSON.stringify(newAccordArr)); //~~~!!! OK
+    },
+  },
 };
 
 // ----------
@@ -229,13 +232,14 @@ Object.keys(newAccordArr).forEach(function(id) {
   width: 80vw;
 }
 .accordContainer {
-  /* display: flex; */  
+  /* display: flex; */
   // border: 1px solid rgb(67, 220, 21);
-
 }
 .accordTitle {
-  border: 1px solid rgb(69, 15, 139);
-// z-index: 15;
+  // border: 3px solid red;
+  position: relative;
+
+  z-index: 10;
 
   color: #fff;
 
@@ -257,14 +261,20 @@ Object.keys(newAccordArr).forEach(function(id) {
     cursor: pointer;
     background-color: #0d6bb8;
   }
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 .accordContent {
-  border: 1px solid rgb(149, 13, 177);
-// height: 100px;
+  // border: 3px solid rgb(149, 13, 177);
+  // position: relative;
+  // height: 100px;
 
-padding: 0 20px;
-// margin: 7px;
+  padding: 0 20px;
+  // margin: 7px;
   color: black;
   background: #fff;
   animation: ani 1.5s forwards;
@@ -279,5 +289,29 @@ padding: 0 20px;
 
   // 0% {transform: translateY(-70%);}
   // 100% {transform: translateY(0);}
+}
+.forClose {
+  border: 1px solid white;
+  position: relative;
+}
+.close-btn {
+  z-index: 16;
+  // border: 3px solid rgb(255, 2, 6);
+  // color: black;
+  color: lightgray;
+  // padding: 50px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  &:hover {
+    color: rgb(104, 1, 1);
+    cursor: pointer;
+  }
+
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 </style>
