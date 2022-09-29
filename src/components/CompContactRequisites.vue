@@ -2,7 +2,9 @@
   <!-- CompContactRequisites -->
   <div id="map">
     <div class="btn">
+      <a name="call" /> <a name="tab" />
       <!-- FIXME: сделать  переключение табов по активной-->
+      <!-- FIXME: исправить размеры, переделать на флексы-->
       <!-- <ul> -->
       <!-- непонял как передать клас в кнопку -->
       <!-- <p class="tab has-icon leftstr "><MainBtn btnName="Контакты" btnUrl="#tab_Контакты" btnStyle="isActive" /></p> -->
@@ -11,7 +13,8 @@
 
       <p class="tab1 " @click="show = !show">
         <!-- FIXME: :btnStyle="styleTest"-->
-        <BaseBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`"  />
+        <BaseBtn :btnName="btnText" btnUrl="#tab"  />
+        <!-- <BaseBtn :btnName="btnText" :btnUrl="`#tab_${btnText}`"  /> -->
       </p>
       <!-- <br><br><br><br><br> -->
       <!-- <p class="tab2 rightstr " @click="show=!show"><MainBtn btnName="Контакты Реквизиты" btnUrl="#tab_Реквизиты" /></p> -->
