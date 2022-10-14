@@ -7,17 +7,21 @@
       <div class="accordTitle">
         <div
           class="forClose"
-          v-for="(accordItem, index) in accordArr"
-          @click="clickElement(accordArr, index)"
+v-for="(accordItem, index) in accordJson.accordArrJson"
+          @click="clickElement(accordJson.accordArrJson, index)" 
+         
           :key="index"
         >
+          <!--         -->
+<!--           v-for="(accordItem, index) in accordArr"
+          @click="clickElement(accordArr, index)"  -->
           <!-- <template> -->
           <div v-html="accordItem.title" />
           <!-- {{ accordArr.title }} -->
           <div
             class="accordContent"
             v-show="accordItem.active"
-            v-html="accordItem.details"
+            v-html="accordItem.details.join(' ')"
           >
             <!-- {{ accordArr.details }} -->
           </div>
@@ -37,6 +41,7 @@
 <script>
 // import PageAccordeonElements from "@/components/PageAccordeonElements.vue";
 import MenuIcon from "material-design-icons-iconfont";
+import json from '@/json/dataAccordeon.json'
 
 export default {
   name: "PageAccordeon",
@@ -47,6 +52,7 @@ export default {
   data: () => {
     return {
       // isElVisible: 1,
+      accordJson: json,
       accordArr: [
         {
           id: 1,
@@ -205,7 +211,7 @@ export default {
   methods: {
     closePopup() {
       // console.log("closePopup");
-      let newNewAccordArr = this.accordArr;
+      let newNewAccordArr = this.accordJson.accordArrJson;
       Object.keys(newNewAccordArr).forEach(function (id) {
         newNewAccordArr[id].active = false;
       });
@@ -215,8 +221,12 @@ export default {
       // Object.keys(newAccordArr).forEach(function (id) {
       //   newAccordArr[id].active = false;
       // });
+// <!-- TODO: -->
+      // console.log("accordArrJson_" + this.accordJson.creater);
+
+
       this.closePopup();
-      this.accordArr[index].active = !this.accordArr[index].active;
+      this.accordJson.accordArrJson[index].active = !this.accordArr[index].active;
 
       // console.log(`--> "accordArr_id_${index}_"+_is_${this.accordArr[index].active}`);
       // console.dir("newAccordArr_2_"+JSON.stringify(newAccordArr)); //~~~!!! OK
@@ -224,6 +234,9 @@ export default {
   },
 };
 
+// console.log("accordArrJson_" + this.json);
+
+// accordJson/accordArrJson
 // ----------
 </script>
 
