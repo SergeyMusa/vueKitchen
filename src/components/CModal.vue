@@ -8,7 +8,7 @@
           <i class="material-icons close-btn" @click="closePopup">
             arrow_circle_down
           </i>
-          <MenuIcon />
+          <!-- <MenuIcon /> -->
         </span>
       </div>
       <div class="v-popup__content">
@@ -23,12 +23,12 @@
 </template>
 
 <script>
-import MenuIcon from "material-design-icons-iconfont";
+// import MenuIcon from "material-design-icons-iconfont";
 
 export default {
   name: "cModal",
   components: {
-    MenuIcon,
+    // MenuIcon,
   },
   props: {
     rightBtnTitle: {

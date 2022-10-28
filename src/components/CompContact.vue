@@ -1,4 +1,5 @@
 <template>
+ <!-- FIXME: переделать позиционирование на флексы-->
   <div class="requisites">
     <div class="requisites__info">
       <CompContactRequisites />

@@ -31,7 +31,7 @@ v-for="(accordItem, index) in accordJson.accordArrJson"
           <i class="material-icons close-btn" @click="closePopup">
             arrow_circle_down
           </i>
-          <MenuIcon />
+          <!-- <MenuIcon /> -->
         </span>
       </div>
     </div>
@@ -40,14 +40,14 @@ v-for="(accordItem, index) in accordJson.accordArrJson"
 
 <script>
 // import PageAccordeonElements from "@/components/PageAccordeonElements.vue";
-import MenuIcon from "material-design-icons-iconfont";
+// import MenuIcon from "material-design-icons-iconfont";
 import json from '@/json/dataAccordeon.json'
 
 export default {
   name: "PageAccordeon",
   components: {
     // PageAccordeonElements,
-    MenuIcon,
+    // MenuIcon,
   },
   data: () => {
     return {
@@ -226,7 +226,7 @@ export default {
 
 
       this.closePopup();
-      this.accordJson.accordArrJson[index].active = !this.accordArr[index].active;
+      this.accordJson.accordArrJson[index].active = !this.accordJson.accordArrJson[index].active;
 
       // console.log(`--> "accordArr_id_${index}_"+_is_${this.accordArr[index].active}`);
       // console.dir("newAccordArr_2_"+JSON.stringify(newAccordArr)); //~~~!!! OK

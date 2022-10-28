@@ -17,9 +17,9 @@
       <CompMotivation />
     </div>
 
-    <div class="home__Card">
+    <!-- <div class="home__Card">
       <CCard />
-    </div>
+    </div> -->
 
     <div class="home__Gallery">
       <CompCarousel />
@@ -36,8 +36,11 @@
     </div> -->
 
     <div class="home__Slider">
-      <PageSlider />
-      slider
+      <CCarousel 
+        :carousel_data="sliderItems"
+        :slideWidth="300"
+        :interval="7000"
+      />
     </div>
 
     <div>
@@ -48,13 +51,14 @@
     </div>
 
     <template>
-      <fab
+      <!-- <fab
         :z-index="101"
         :ripple-show="true"
         :actions="fabActions"
 
         @click="clickItem"
-      ></fab>
+      ></fab> -->
+
       <!-- :position="bottom-left"
         :position-type="fixed"
         :z-index="101"
@@ -78,14 +82,14 @@ import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
 import CompContact from "@/components/CompContact.vue";
 import CompMotivation from "@/components/CompMotivation.vue";
-import PageSlider from "@/components/PageSlider.vue";
+import CCarousel from "@/components/CCarousel.vue";
 import PageAccordeon from "@/components/PageAccordeon.vue";
 // import CompAccordionW from "@/components/CompAccordionW.vue";
 import CBenefit from "@/components/CBenefit.vue";
-import fab from "vue-fab";
+// import fab from "vue-fab";
 import CompJson from "@/components/CompJson.vue";
 import CPresent from "@/components/CPresent.vue";
-import CCard from "@/components/CCard.vue";
+// import CCard from "@/components/CCard.vue";
 
 
 export default {
@@ -94,15 +98,15 @@ export default {
     PageFirst,
     CompMotivation,
     CompCarousel,
-    PageSlider,
+    CCarousel,
     PageAccordeon,
     // CompAccordionW,
     CompJson,
     CompContact,
     CBenefit,
     CPresent,
-    CCard,
-    fab,
+    // CCard,
+    // fab,
   },
   data() {
     return {
@@ -119,6 +123,12 @@ export default {
         },
       ],
       mainBtnColor: "#3eaf7c",
+      sliderItems:[
+        {id:1, name:"sliderImg1", img:"p1.jpeg", descr:"Собственный цех с современным оборудованием"},
+        {id:2, name:"sliderImg2", img:"p2.jpeg", descr:"Основные сотрудники работают на своих местах уже более 10 лет"},
+        {id:3, name:"sliderImg3", img:"p3.jpeg", descr:"Огромный выбор фурнитуры, практически любая из имеющейся на рынке"},
+        {id:4, name:"sliderImg4", img:"p4.jpeg", descr:""},
+      ]
     };
   },
   methods: {

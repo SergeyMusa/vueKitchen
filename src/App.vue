@@ -13,6 +13,8 @@
         <router-view/>
           <!-- <PageMain /> -->
       </div> 
+      <MenuIcon />
+      <!-- https://fonts.google.com/icons?selected=Material+Icons:arrow_circle_down -->
     </div>
 
     <div class="app__pageBottom">
@@ -25,12 +27,14 @@
 import SiteHeader from '@/components/SiteHeader.vue'
 // import PageMain from '@/components/PageMain.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
+import MenuIcon from "material-design-icons-iconfont"
 
 export default {
    components: {
         SiteHeader,
         // PageMain,
-        SiteFooter
+        SiteFooter,
+        MenuIcon
    }
 }
 </script>
