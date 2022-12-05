@@ -17,10 +17,12 @@
       <CompMotivation />
     </div>
 
-    <!-- <div class="home__Card">
-      <CCard />
-    </div> -->
+    <div class="home__Cards">
+      <CCards />
+      CCards
+    </div>
 
+<!-- DELETE IT -->
     <div class="home__Gallery">
       <CompCarousel />
     </div>
@@ -89,7 +91,7 @@ import CBenefit from "@/components/CBenefit.vue";
 // import fab from "vue-fab";
 import CompJson from "@/components/CompJson.vue";
 import CPresent from "@/components/CPresent.vue";
-// import CCard from "@/components/CCard.vue";
+import CCards from "@/components/CCards.vue";
 
 
 export default {
@@ -105,7 +107,7 @@ export default {
     CompContact,
     CBenefit,
     CPresent,
-    // CCard,
+    CCards,
     // fab,
   },
   data() {

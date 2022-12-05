@@ -5,19 +5,18 @@
       <!-- FIXME: кнопки и листание-->
       <!-- <hr /> -->
 
-
       <div class="wrapper">
-              <div>
-        <i
-          class="material-icons leftButton"
-          @click="prevSlide"
-          alt="leftButton"
-          type="image"
-          size="50px"
-          >arrow_back_ios</i
-        >
-        <!-- <button class="leftButton" @click="prevSlide" alt="leftButton"></button> -->
-      </div>
+        <div>
+          <i
+            class="material-icons leftButton"
+            @click="prevSlide"
+            alt="leftButton"
+            type="image"
+            size="50px"
+            >arrow_back_ios</i
+          >
+          <!-- <button class="leftButton" @click="prevSlide" alt="leftButton"></button> -->
+        </div>
         <div
           class="carousel"
           :style="{ 'margin-left': '-' + 100 * currentSlideIndex + '%' }"
@@ -33,23 +32,21 @@
             <p>{{ item.name }}</p>
           </CCarouselItem>
         </div>
-          <div>
-        <!-- arrow_circle_right -->
-        <i
-          class="material-icons rightButton"
-          @click="nextSlide"
-          alt="rightButton"
-          type="image"
-          >arrow_forward_ios</i
-        >
-        <!-- <button class="rightButton" @click="nextSlide" >Next</button> -->
+        <div>
+          <!-- arrow_circle_right -->
+          <i
+            class="material-icons rightButton"
+            @click="nextSlide"
+            alt="rightButton"
+            type="image"
+            >arrow_forward_ios</i
+          >
+          <!-- <button class="rightButton" @click="nextSlide" >Next</button> -->
+        </div>
       </div>
-      </div>
-    
 
       <!-- <hr /> -->
     </div>
-
   </div>
 </template>
 
@@ -160,7 +157,7 @@ background-repeat : no-repeat; */
   /* margin-left: 110px; */
   /* padding-left: 110px; */
   position: absolute;
-   top: 70px;
+  top: 70px;
   right: -5px;
   /* right: 23vw; */
   cursor: pointer;
