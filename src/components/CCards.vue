@@ -1,7 +1,9 @@
 <template>
   <div class="CCards">
     C-Cards
-    <div class="cards-item" :style="{ 'min-width': width + 'px' }">
+    <!-- FIXME: -->
+    <!-- <div class="cards-item" :style="{ 'min-width': width + 'px' }"> -->
+      <div class="cards-item" :style="{ 'min-width': 400 + 'px' }">
       <!-- :src="require('../assets/img/1/' + item_data.img)" -->
       <!-- <img src="../assets/img/1/1.jpg" alt="" /> -->
     </div>

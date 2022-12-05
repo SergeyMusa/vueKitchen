@@ -4,6 +4,8 @@ import router from "./router";
 import BaseBtn from "@/components/base/BaseBtn.vue";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+// $material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
+// import '~material-design-icons-iconfont/src/material-design-icons';
 
 Vue.config.productionTip = false;
 

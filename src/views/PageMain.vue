@@ -19,7 +19,7 @@
 
     <div class="home__Cards">
       <CCards />
-      CCards
+      <!-- CCards -->
     </div>
 
 <!-- DELETE IT -->
@@ -129,7 +129,7 @@ export default {
         {id:1, name:"sliderImg1", img:"p1.jpeg", descr:"Собственный цех с современным оборудованием"},
         {id:2, name:"sliderImg2", img:"p2.jpeg", descr:"Основные сотрудники работают на своих местах уже более 10 лет"},
         {id:3, name:"sliderImg3", img:"p3.jpeg", descr:"Огромный выбор фурнитуры, практически любая из имеющейся на рынке"},
-        {id:4, name:"sliderImg4", img:"p4.jpeg", descr:""},
+        {id:4, name:"sliderImg4", img:"p4.jpeg", descr:"1"},
       ]
     };
   },
