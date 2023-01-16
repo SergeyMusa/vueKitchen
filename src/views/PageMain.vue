@@ -22,7 +22,7 @@
       <!-- CCards -->
     </div>
 
-<!-- DELETE IT -->
+    <!-- DELETE IT -->
     <div class="home__Gallery">
       <CompCarousel />
     </div>
@@ -38,7 +38,7 @@
     </div> -->
 
     <div class="home__Slider">
-      <CCarousel 
+      <CCarousel
         :carousel_data="sliderItems"
         :slideWidth="300"
         :interval="7000"
@@ -93,7 +93,6 @@ import CompJson from "@/components/CompJson.vue";
 import CPresent from "@/components/CPresent.vue";
 import CCards from "@/components/CCards.vue";
 
-
 export default {
   name: "PageMain",
   components: {
@@ -125,12 +124,29 @@ export default {
         },
       ],
       mainBtnColor: "#3eaf7c",
-      sliderItems:[
-        {id:1, name:"sliderImg1", img:"p1.jpeg", descr:"Собственный цех с современным оборудованием"},
-        {id:2, name:"sliderImg2", img:"p2.jpeg", descr:"Основные сотрудники работают на своих местах уже более 10 лет"},
-        {id:3, name:"sliderImg3", img:"p3.jpeg", descr:"Огромный выбор фурнитуры, практически любая из имеющейся на рынке"},
-        {id:4, name:"sliderImg4", img:"p4.jpeg", descr:"1"},
-      ]
+      sliderItems: [
+        {
+          id: 1,
+          name: "sliderImg1",
+          img: "p1.jpeg",
+          descr: "Собственный цех с современным оборудованием",
+        },
+        {
+          id: 2,
+          name: "sliderImg2",
+          img: "p2.jpeg",
+          descr:
+            "Основные сотрудники работают на своих местах уже более 10 лет",
+        },
+        {
+          id: 3,
+          name: "sliderImg3",
+          img: "p3.jpeg",
+          descr:
+            "Огромный выбор фурнитуры, практически любая из имеющейся на рынке",
+        },
+        { id: 4, name: "sliderImg4", img: "p4.jpeg", descr: "1" },
+      ],
     };
   },
   methods: {
@@ -142,7 +158,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 /* FIXME: переделать на флекс  */
 
 .home {
@@ -155,48 +171,56 @@ export default {
 
   /* min-height: 100vh; */
   flex: 1;
-}
-.home__Accordeon {
-  /* border: 1px solid rgb(17, 11, 192); */
-}
-.home__PageFirst {
-  /* border: 1px solid rgb(0, 255, 0); */
 
-  width: 80%;
-  height: 55%;
+  &__Accordeon {
+    /* border: 1px solid rgb(17, 11, 192); */
+  }
+  &__PageFirst {
+    /* border: 1px solid rgb(0, 255, 0); */
 
-  /* width: 80vw;
+    width: 80%;
+    height: 55%;
+
+    /* width: 80vw;
     height: 56vh; */
-  margin-top: 10px;
+    margin-top: 10px;
 
-  background-image: url(@/assets/img/s1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 20px 20px 50px white inset;
-}
-.home__Present{
-  position: fixed;
-  bottom: 50px;
-  left: 10px;
-  opacity: .7;
-}
-.home__Benefit {
-  width: 80%;
-  margin: 20px 0;
-  /* padding: 0 50px; */
-}
-.Motivation {
-  /* border: 1px solid rgb(104, 26, 169); */
-  margin-top: 1px;
-}
-.home__pageMap {
-  /* border: 1px solid rgb(60, 46, 192); */
-  margin-top: 5%;
-}
-/* .vueperslide__title{
+    background-image: url(@/assets/img/s1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 20px 20px 50px white inset;
+  }
+  &__Present {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    opacity: 0.7;
+  }
+  &__Benefit {
+    width: 80%;
+    margin: 20px 0;
+    /* padding: 0 50px; */
+  }
+  &__Motivation {
+    border: 1px solid red;
+    width: 80%;
+    margin: 20px 0;
+
+    margin-top: 1px;
+  }
+  &__Cards {
+    width: 80%;
+    margin: 20px 0;
+  }
+  &__pageMap {
+    /* border: 1px solid rgb(60, 46, 192); */
+    margin-top: 5%;
+  }
+  /* .vueperslide__title{
       border: 1px solid red;
 }
 p{
       border: 1px solid blue;
 } */
+}
 </style>

@@ -22,9 +22,9 @@ export default {
 
 <style scoped>
 .logo {
-    border: 1px solid red;
-    margin: 50px 0;
-    width: 80vw;
+    /* border: 1px solid red; */
+    /* margin: 50px 0;
+    width: 80vw; */
 
   /* height: 324px; */
 }

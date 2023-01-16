@@ -58,7 +58,7 @@
           <p class="leftstr">Воскресенье</p>
           <p class="rightstr">с 10:00 до 17:00</p>
 
-          <div v-t="'message.hello'"></div>
+          <!-- <div v-t="'message.hello'"></div> -->
           <p>&nbsp;</p>
         </li>
       </ul>
