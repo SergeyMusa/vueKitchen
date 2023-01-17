@@ -6,7 +6,7 @@
     <!-- <div class="cards-item" :style="{ 'min-width': width + 'px' }"> -->
     <div class="card__list">
       <CCatalogItem
-        v-for="kitchen in kitchens"
+        v-for="kitchen in KITCHENS"
         :key="kitchen.article"
         v-bind:kitchen_data="kitchen"
         @sendArticle="showChildArticleInConsole"
@@ -17,6 +17,8 @@
 
 <script>
 import CCatalogItem from "@/components/CCatalogItem.vue";
+import { mapActions, mapGetters } from "vuex";
+
 
 export default {
   name: "CCards",
@@ -25,66 +27,29 @@ export default {
   },
   props: {},
   data() {
-    return {
-      kitchens: [
-        {
-          image: "1.jpg",
-          name: "T-shirt 1",
-          price: 2100.234234234,
-          article: "T1",
-          available: true,
-          category: "Классика",
-        },
-        {
-          image: "2.jpg",
-          name: "T-shirt 2",
-          price: 3150.12312412,
-          article: "T2",
-          available: true,
-          category: "Классика",
-        },
-        {
-          image: "3.jpg",
-          name: "T-shirt 3",
-          price: 4200.51524,
-          article: "T3",
-          available: false,
-          category: "Модерн",
-        },
-        {
-          image: "4.jpg",
-          name: "T-shirt 4",
-          price: 5300.1245512,
-          article: "T4",
-          available: true,
-          category: "Ретро",
-        },
-        {
-          image: "5.jpg",
-          name: "T-shirt 5",
-          price: 6500.3522314,
-          article: "T5",
-          available: false,
-          category: "Классика",
-        },
-        {
-          image: "6.jpg",
-          name: "T-shirt 6",
-          price: 8700.4124123,
-          article: "T6",
-          available: true,
-          category: "Модерн",
-        },
-      ],
-    };
+    return {};
   },
-  computed: {},
+  computed: {
+    ...mapGetters([
+      'KITCHENS'
+    ])
+  },
   methods: {
     // sendArticle
     showChildArticleInConsole(data) {
-      console.log(data)
-    }
-  }
+      console.log(data);
+    },
+    ...mapActions(["GET_KITCHENS_FROM_API"]),
+  },
+  mounted() {
+    this.GET_KITCHENS_FROM_API()
+    .then((Response) => {
+      if (Response.data) {
+        console.log('Data_arrived!');
+      }
+    })
+    ;
+  },
 };
 </script>
 
@@ -101,7 +66,7 @@ export default {
   }
 }
 .CCards {
-  border: 1px solid rgb(155, 2, 243);
+  /* border: 1px solid rgb(155, 2, 243); */
 }
 .card__list {
   border: 1px solid rgb(8, 212, 239);

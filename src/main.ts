@@ -1,9 +1,11 @@
 import Vue from "vue";
+import Vuex from 'vuex';
 import App from "./App.vue";
 import router from "./router";
 import BaseBtn from "@/components/base/BaseBtn.vue";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
+import store from "./vuex/store";
 // $material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
 // import '~material-design-icons-iconfont/src/material-design-icons';
 
@@ -31,4 +33,5 @@ requireComponent.keys().forEach((fileName) => {
 new Vue({
   router,
   render: (h) => h(App),
+  store
 }).$mount("#app");
