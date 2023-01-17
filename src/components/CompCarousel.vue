@@ -107,8 +107,8 @@ import 'vueperslides/dist/vueperslides.css'
 
 <style scoped>
 .slider{
-  width: 80vw;
-      border: 1px solid rgb(214, 125, 9);
+  /* width: 80vw;
+      border: 1px solid rgb(214, 125, 9); */
 
 }
 .thumbnails {

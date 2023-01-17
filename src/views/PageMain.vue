@@ -159,6 +159,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+%pagemargin {
+  width: 80%;
+  margin: 20px 0;
+  border: 1px solid rgb(255, 157, 0); 
+}
 /* FIXME: переделать на флекс  */
 
 .home {
@@ -173,16 +178,14 @@ export default {
   flex: 1;
 
   &__Accordeon {
-    /* border: 1px solid rgb(17, 11, 192); */
+    @extend %pagemargin ;
   }
+  &__Slider {
+    @extend %pagemargin ;
+  }
+
   &__PageFirst {
-    /* border: 1px solid rgb(0, 255, 0); */
-
-    width: 80%;
-    height: 55%;
-
-    /* width: 80vw;
-    height: 56vh; */
+    @extend %pagemargin ;
     margin-top: 10px;
 
     background-image: url(@/assets/img/s1.jpg);
@@ -197,24 +200,23 @@ export default {
     opacity: 0.7;
   }
   &__Benefit {
-    width: 80%;
-    margin: 20px 0;
-    /* padding: 0 50px; */
+    @extend %pagemargin ;
   }
   &__Motivation {
-    border: 1px solid red;
-    width: 80%;
-    margin: 20px 0;
-
-    margin-top: 1px;
+    @extend %pagemargin ;
+    // margin-top: 1px;
   }
   &__Cards {
-    width: 80%;
-    margin: 20px 0;
+    @extend %pagemargin ;
+  }
+  &__Gallery {
+    @extend %pagemargin ;
   }
   &__pageMap {
-    /* border: 1px solid rgb(60, 46, 192); */
+    /*  */border: 1px solid rgb(60, 46, 192);
     margin-top: 5%;
+    // @extend %pagemargin ;
+
   }
   /* .vueperslide__title{
       border: 1px solid red;

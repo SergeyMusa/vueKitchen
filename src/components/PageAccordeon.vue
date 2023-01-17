@@ -242,7 +242,7 @@ export default {
 
 <style scoped lang="scss">
 .accordion {
-  width: 80vw;
+  // width: 80vw;
 }
 .accordContainer {
   /* display: flex; */

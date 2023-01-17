@@ -106,7 +106,7 @@ export default {
 <style scoped>
 .slider {
   /* border: 1px solid rgb(0, 255, 0); */
-  width: 80vw;
+  /* width: 80vw; */
   /* height: 31vh; */
   display: flex;
   flex-direction: row;
