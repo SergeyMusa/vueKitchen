@@ -13,7 +13,7 @@
         <router-view/>
           <!-- <PageMain /> -->
       </div> 
-      <MenuIcon />
+      <!-- <MenuIcon /> -->
       <!-- https://fonts.google.com/icons?selected=Material+Icons:arrow_circle_down -->
     </div>
 
@@ -27,14 +27,17 @@
 import SiteHeader from '@/components/SiteHeader.vue'
 // import PageMain from '@/components/PageMain.vue'
 import SiteFooter from '@/components/SiteFooter.vue'
-import MenuIcon from "material-design-icons-iconfont"
+// import MenuIcon from "material-design-icons-iconfont"
+
+// import { CheckCircle } from 'vue-icon-packs/oc'
+// https://search-vue-icon-packs.vercel.app/?i=oc%2FCheckCircle
 
 export default {
    components: {
         SiteHeader,
         // PageMain,
         SiteFooter,
-        MenuIcon
+        // MenuIcon
    }
 }
 </script>

@@ -29,7 +29,8 @@ v-for="(accordItem, index) in accordJson.accordArrJson"
         </div>
         <span>
           <i class="material-icons close-btn" @click="closePopup">
-            arrow_circle_down
+            <!-- arrow_circle_down -->
+            <ArrowDownCircleLine />
           </i>
           <!-- <MenuIcon /> -->
         </span>
@@ -41,6 +42,7 @@ v-for="(accordItem, index) in accordJson.accordArrJson"
 <script>
 // import PageAccordeonElements from "@/components/PageAccordeonElements.vue";
 // import MenuIcon from "material-design-icons-iconfont";
+import { ArrowDownCircleLine } from 'vue-icon-packs/ri'
 import json from '@/json/dataAccordeon.json'
 
 export default {
@@ -48,6 +50,7 @@ export default {
   components: {
     // PageAccordeonElements,
     // MenuIcon,
+    ArrowDownCircleLine
   },
   data: () => {
     return {
@@ -309,6 +312,8 @@ export default {
 }
 .close-btn {
   z-index: 16;
+  // width: 30px;
+  font-size: 1.6em;
   // border: 3px solid rgb(255, 2, 6);
   // color: black;
   color: lightgray;
@@ -316,6 +321,7 @@ export default {
   position: absolute;
   right: 10px;
   top: 10px;
+  // 
 
   &:hover {
     color: rgb(104, 1, 1);

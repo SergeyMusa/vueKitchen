@@ -6,7 +6,8 @@
         <span>{{ popupName }}</span>
         <span>
           <i class="material-icons close-btn" @click="closePopup">
-            arrow_circle_down
+            <!-- arrow_circle_down -->
+            <ArrowDownCircleLine />
           </i>
           <!-- <MenuIcon /> -->
         </span>
@@ -24,11 +25,13 @@
 
 <script>
 // import MenuIcon from "material-design-icons-iconfont";
+import { ArrowDownCircleLine } from 'vue-icon-packs/ri'
 
 export default {
   name: "cModal",
   components: {
     // MenuIcon,
+    ArrowDownCircleLine
   },
   props: {
     rightBtnTitle: {
