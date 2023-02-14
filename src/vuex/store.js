@@ -6,12 +6,32 @@ Vue.use(Vuex);
 
 let store = new Vuex.Store( {
     state: {
-        kitchens: []
+        kitchens: [],
+        cart: []
     },
     mutations: {
-        SET_KITCHENS_TO_STATE: (state, kitchens) => {
-            state.kitchens = kitchens;
-        }
+        SET_KITCHENS_TO_STATE: (state, kitchen) => {
+            state.kitchens = kitchen;
+        },
+        SET_CART: (state, kitchen) => {
+            if (state.cart.length) {
+                let isProductExists = false;
+                state.cart.map(function (item) {
+                    if (item.article === kitchen.article) {
+                        isProductExists = true;
+                        item.quantity++
+                    }
+                })
+                if (!isProductExists) {
+                    state.cart.push(kitchen) ;
+                }
+            } else {
+              state.cart.push(kitchen) ;  
+            }
+        },
+        REMOVE_FROM_CART: (state, index) => {
+            state.cart.splice(index, 1) ;
+        },
     },
     actions: {
         GET_KITCHENS_FROM_API({commit}) {
@@ -27,12 +47,21 @@ let store = new Vuex.Store( {
                     return error;
                 })
                 ;
-        }
+        },
+        ADD_TO_CART({commit}, kitchens) {
+            commit('SET_CART', kitchens);
+        },
+        DELETE_FROM_CART({commit}, index) {
+            commit('REMOVE_FROM_CART', index);
+        },
     },
     getters: {
         KITCHENS(state) {
             return state.kitchens;
-        }
+        },
+        CART(state) {
+            return state.cart;
+        },
     }
 }) ;
 

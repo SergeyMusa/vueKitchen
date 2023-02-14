@@ -3,47 +3,47 @@
     {
       "image": "1.jpg",
       "name": "Best-Kitchen-1",
-      "price": 2100.5,
+      "price": 20100.5,
       "article": "T1",
       "available": true,
       "category": "Пленка"
     },
     {
       "image": "2.jpg",
-      "name": "T-shirt 2",
-      "price": 3150.12312412,
+      "name": "Best-Kitchen-2",
+      "price": 30150.12,
       "article": "T2",
       "available": true,
       "category": "Массив"
     },
     {
       "image": "3.jpg",
-      "name": "T-shirt 3",
-      "price": 4200.51524,
+      "name": "Best-Kitchen-3",
+      "price": 400200,
       "article": "T3",
       "available": false,
       "category": "Пластик"
     },
     {
       "image": "4.jpg",
-      "name": "T-shirt 4",
-      "price": 5300.1245512,
+      "name": "BEST-4",
+      "price": 530000,
       "article": "T4",
       "available": true,
       "category": "Пленка"
     },
     {
       "image": "1.jpg",
-      "name": "T-shirt 5",
-      "price": 6500.3522314,
+      "name": "Best-Kitchen-5",
+      "price": 60500.35,
       "article": "T5",
       "available": false,
       "category": "Пластик"
     },
     {
       "image": "2.jpg",
-      "name": "T-shirt 6",
-      "price": 8700.4124123,
+      "name": "Kitchen-6",
+      "price": 87000,
       "article": "T6",
       "available": true,
       "category": "Пластик"

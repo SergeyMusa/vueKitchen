@@ -1,6 +1,7 @@
 <template>
     <div class="TEMP">
-        
+        <!-- <MenuIcon /> -->
+
     </div>
 </template>
 
@@ -9,6 +10,9 @@
 
     export default {
         name:"TEMP",
+        components: {
+            // MenuIcon,
+        },
         props:{},
         data() {
             return {}

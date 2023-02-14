@@ -1,4 +1,4 @@
-# test
+# Kitchens
 
 ## Project setup
 ```

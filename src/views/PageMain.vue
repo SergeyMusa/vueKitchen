@@ -21,10 +21,17 @@
       <CompMotivation />
     </div>
 
-    <div class="home__Cards">
-      <CCards />
-      <!-- CCards -->
+    <div class="home__CCatalog">
+      <CCatalog />
     </div>
+    <div class="home__Cards">
+      <CCart 
+        v-if='CART.length' 
+        :cart_data="CART"
+      />
+      <!-- Корзина -->
+    </div>
+    
 
     <!-- DELETE IT -->
     <div class="home__Gallery">
@@ -83,6 +90,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 // @ is an alias to /src
 import PageFirst from "@/components/PageFirst.vue";
 import CompCarousel from "@/components/CompCarousel.vue";
@@ -95,9 +103,9 @@ import CBenefit from "@/components/CBenefit.vue";
 // import fab from "vue-fab";
 import CompJson from "@/components/CompJson.vue";
 import CPresent from "@/components/CPresent.vue";
-import CCards from "@/components/CCards.vue";
+import CCatalog from "@/components/CCatalog.vue";
 // import CCanvas from "@/components/CCanvas.vue";
-  
+import CCart from "@/components/cart/CCart.vue";
 
 
 export default {
@@ -113,9 +121,15 @@ export default {
     CompContact,
     CBenefit,
     CPresent,
-    CCards,
+    CCatalog,
+    CCart,
     // CCanvas,
     // fab,
+  },
+  computed: {
+    ...mapGetters([
+      'CART'
+    ]),
   },
   data() {
     return {
@@ -214,7 +228,7 @@ export default {
     @extend %pagemargin ;
     // margin-top: 1px;
   }
-  &__Cards {
+  &__CCatalog {
     @extend %pagemargin ;
   }
   &__Gallery {

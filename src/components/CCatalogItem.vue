@@ -10,7 +10,8 @@
     <p class="CCatalogItem__name">{{ kitchen_data.name }}</p>
     <p class="CCatalogItem__price">{{ kitchen_data.price }} ₽</p>
     <!-- ₽ + &#8381 + \u20bd + &#x20bd + U+20BD (Unicode hex) -->
-    <button class="CCatalogItem__btn btn" @click="sendDataToCCards">
+    <!-- <button class="CCatalogItem__btn btn" @click="sendDataToCCards"> -->
+    <button class="CCatalogItem__btn btn" @click="addToCart">
       Add to cart
     </button>
   </div>
@@ -34,9 +35,12 @@ export default {
   },
   computed: {},
   methods: {
-    sendDataToCCards() {
-      this.$emit("sendArticle", this.kitchen_data.article);
-    },
+    // sendDataToCCards() {
+    //   this.$emit("sendArticle", this.kitchen_data.article);
+    // },
+    addToCart () {
+      this.$emit('addToCart',this.kitchen_data)
+    }
   },
 };
 </script>
@@ -52,7 +56,6 @@ export default {
   /* padding: $padding * 2; */
   padding: 16px * 2;
   margin-bottom: 16px * 2;
-
   &__image {
     width: 150px;
   }
