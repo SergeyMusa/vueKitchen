@@ -13,6 +13,10 @@
       <CBenefit />
     </div>
 
+    <!-- <div class="home__CANVAS">
+      <CCanvas />
+    </div> -->
+
     <div class="home__Motivation">
       <CompMotivation />
     </div>
@@ -92,6 +96,9 @@ import CBenefit from "@/components/CBenefit.vue";
 import CompJson from "@/components/CompJson.vue";
 import CPresent from "@/components/CPresent.vue";
 import CCards from "@/components/CCards.vue";
+// import CCanvas from "@/components/CCanvas.vue";
+  
+
 
 export default {
   name: "PageMain",
@@ -107,6 +114,7 @@ export default {
     CBenefit,
     CPresent,
     CCards,
+    // CCanvas,
     // fab,
   },
   data() {

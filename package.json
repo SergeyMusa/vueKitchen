@@ -1,5 +1,5 @@
 {
-  "name": "Mebel-X",
+  "name": "mebel-x",
   "version": "0.2.3",
   "private": true,
   "scripts": {
@@ -69,5 +69,18 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "```\r npm install\r ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyMusa/vueKitchen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyMusa/vueKitchen/issues"
+  },
+  "homepage": "https://github.com/SergeyMusa/vueKitchen#readme"
 }
